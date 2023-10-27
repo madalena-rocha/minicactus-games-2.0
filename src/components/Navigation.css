@@ -1,0 +1,156 @@
+nav {
+  display: flex;
+
+  height: var(--nav-height);
+  background-color: var(--primary-color);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+nav .logo {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+nav .logo img {
+  width: 3.1rem;
+}
+
+nav .logo h3 {
+  color: var(--secondary-color);
+}
+
+/*=== RESPONSIVO ========================*/
+
+@media (min-width: 1024px) {
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu,
+  nav#navigation .social-links {
+    display: none;
+  }
+
+  nav#navigation .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+  }
+
+  nav#navigation .short-menu {
+    width: auto;
+  }
+
+  nav#navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation .logo h3,
+  nav#navigation .menu ul li a {
+    color: var(--secondary-color);
+  }
+
+  nav#navigation .menu a.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+
+    border-radius: 4rem;
+
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  nav#navigation .menu a.button:hover {
+    background-color: var(--body-color);
+    color: var(--secondary-color);
+  }
+
+  nav#navigation.scroll .menu a.button {
+    color: var(--secondary-color);
+    background-color: #00c753;
+  }
+
+  nav#navigation .menu li a.active,
+  nav#navigation .menu li a:hover {
+    font-weight: 700;
+  }
+
+  nav#navigation .menu li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondary-color);
+
+    position: relative;
+    bottom: -2rem;
+    left: -0.5rem;
+
+    display: block;
+
+    transition: width 0.2s;
+  }
+
+  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+  }
+
+  nav#navigation.scroll .menu a.button.active,
+  nav#navigation.scroll .menu a.button:hover {
+    background-color: var(--body-color);
+    filter: brightness(1.3);
+  }
+}

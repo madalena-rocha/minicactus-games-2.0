@@ -1,0 +1,50 @@
+/*=== GERAL =============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --body-color: #1e1e1e;
+  --headline: #707070;
+  --paragraph: #f7f7f7;
+
+  font-size: 62.5%; /* 1rem = 10px */
+
+  --nav-height: 7.2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "DM Sans";
+  font-size: 1.6rem; /* 16px */
+
+  text-align: center;
+
+  overflow: overlay;
+
+  background-color: var(--body-color);
+}
+
+/*=== RESPONSIVO ========================*/
+
+@media (min-width: 1024px) {
+  /*=== GERAL =============================*/
+
+  body {
+    overflow: auto;
+  }
+}

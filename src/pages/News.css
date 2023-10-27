@@ -1,0 +1,55 @@
+#news header h2 {
+  margin-bottom: 6rem;
+}
+
+#news .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#news .card {
+  display: flex;
+  gap: 2.4rem;
+
+  align-items: center;
+  text-align: left;
+
+  background: var(--primary-color);
+}
+
+#news .card img {
+  width: 40%;
+}
+
+#news .card .new {
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+}
+
+#news .card h3 {
+  margin-block: 1.6rem;
+  color: var(--headline);
+}
+
+/*=== RESPONSIVO ========================*/
+
+@media (min-width: 1024px) {
+  #news .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #news .card {
+    width: 45%;
+  }
+
+  #news .card .new {
+    padding-right: 2.4rem;
+  }
+}

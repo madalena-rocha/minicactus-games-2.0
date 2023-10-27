@@ -1,0 +1,3 @@
+#air-console:hover svg path {
+  fill: var(--secondary-color);
+}

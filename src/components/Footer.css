@@ -1,0 +1,53 @@
+footer {
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo img {
+  height: 3.1rem;
+}
+
+footer p {
+  color: var(--paragraph);
+  line-height: 2;
+
+  //margin-bottom: 3.2rem;
+}
+
+footer a {
+  color: var(--paragraph);
+  text-decoration: none;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/*=== RESPONSIVO ========================*/
+
+@media (min-width: 1024px) {
+  footer .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+  }
+
+  .col-a {
+    grid-area: A;
+    align-self: center;
+  }
+
+  .col-b {
+    grid-area: B;
+
+    align-self: center;
+    justify-self: flex-end;
+  }
+}
