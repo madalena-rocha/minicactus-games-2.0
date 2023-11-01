@@ -1,5 +1,12 @@
 /* eslint-disable */
 
+import { useState } from "react";
+
+import { Element, Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+
+import { v4 as uuidv4 } from "uuid";
+
 import "./App.css";
 
 import { SteamBtn } from "../components/SteamBtn";
@@ -13,8 +20,6 @@ import { Section } from "../components/Section";
 import { Game } from "../components/Game";
 import { Footer } from "../components/Footer";
 import { BackToTopBtn } from "../components/BackToTopBtn";
-
-import { v4 as uuidv4 } from "uuid";
 
 import chaseSurvivors from "../../src/assets/chase-survivors.png";
 import roadDefense from "../../src/assets/road-defense.png";
@@ -138,7 +143,7 @@ export function App() {
             rel="noreferrer"
           >
             (@marta.machado.rocha)
-          </a>
+          </a>{" "}
           and illustrated by Alexandre Rocha{" "}
           <a
             target="_blank"
@@ -233,114 +238,141 @@ export function App() {
     },
   ];
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove("menu-expanded");
+  };
+
   return (
     <>
-      <Navigation href="#games">
+      <Navigation>
         <ul>
           <li>
-            <a onClick="closeMenu()" href="#games">
+            <ScrollLink
+              to="games"
+              spy={true}
+              smooth={true}
+              offset={-72}
+              duration={500}
+              onClick={() => closeMenu()}
+            >
               Games
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a onClick="closeMenu()" href="#news">
-              News
-            </a>
-          </li>
-          <li>
-            <a onClick="closeMenu()" href="#about">
+            <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-72}
+              duration={500}
+              onClick={() => closeMenu()}
+            >
               About
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a onClick="closeMenu()" href="#contact">
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-72}
+              duration={500}
+              onClick={() => closeMenu()}
+            >
               Contact
-            </a>
+            </ScrollLink>
+          </li>
+          <li>
+            <RouterLink to="/news">News</RouterLink>
           </li>
         </ul>
       </Navigation>
 
-      <Section
-        id="games"
-        title={
-          <span>
-            Game <span>List</span>
-          </span>
-        }
-      >
-        <div className="cards">
-          {gamesData.map((game) => (
-            <Game
-              key={game.id}
-              src={game.src}
-              alt={game.alt}
-              title={game.title}
-              description={game.description}
-            >
-              {game.links}
-            </Game>
-          ))}
-        </div>
-      </Section>
+      <Element name="games">
+        <Section
+          id="games"
+          title={
+            <span>
+              Game <span>List</span>
+            </span>
+          }
+        >
+          <div className="cards">
+            {gamesData.map((game) => (
+              <Game
+                key={game.id}
+                src={game.src}
+                alt={game.alt}
+                title={game.title}
+                description={game.description}
+              >
+                {game.links}
+              </Game>
+            ))}
+          </div>
+        </Section>
+      </Element>
 
-      <Section id="about" title="About">
-        <p>
-          Minicactus Games is an independent game studio based in Brazil.
-          Founded in 2021 by Cleiton Machado
+      <Element name="about">
+        <Section id="about" title="About">
+          <p>
+            Minicactus Games is an independent game studio based in Brazil.
+            Founded in 2021 by Cleiton Machado{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/clayton_axel"
+              rel="noreferrer"
+            >
+              (@clayton_axel)
+            </a>
+            , Minicactus Games has been developing games of the most diverse
+            genres, with more than 10 titles released so far. We are present on
+            Steam, Playstation, Xbox, Nintendo Switch and Airconsole, with the
+            expectation of growing more and more in the video game industry.
+          </p>
+        </Section>
+      </Element>
+
+      <Element name="contact">
+        <Section id="contact" title="Contact">
+          <ul>
+            <li>
+              <MapPin size={24} />
+              R. Bispo Renato Conceição da Cunha, 384 - Lauro de Freitas, Bahia,
+              Brazil - 42703-080
+            </li>
+
+            <li>
+              <EnvelopeSimple size={24} />
+              contact@minicactusgames.com
+            </li>
+
+            <li>
+              <EnvelopeSimple size={24} />
+              minicactusgames@outlook.com
+            </li>
+          </ul>
+
           <a
+            className="button"
             target="_blank"
-            href="https://twitter.com/clayton_axel"
+            href="http://discordapp.com/users/443424863663947778"
             rel="noreferrer"
           >
-            (@clayton_axel)
+            <DiscordLogo size={28} weight="fill" />
+            Discord
           </a>
-          , Minicactus Games has been developing games of the most diverse
-          genres, with more than 10 titles released so far. We are present on
-          Steam, Playstation, Xbox, Nintendo Switch and Airconsole, with the
-          expectation of growing more and more in the video game industry.
-        </p>
-      </Section>
+        </Section>
+      </Element>
 
-      <Section id="contact" title="Contact">
-        <ul>
-          <li>
-            <MapPin size={24} />
-            R. Bispo Renato Conceição da Cunha, 384 - Lauro de Freitas, Bahia,
-            Brazil - 42703-080
-          </li>
-
-          <li>
-            <EnvelopeSimple size={24} />
-            contact@minicactusgames.com
-          </li>
-
-          <li>
-            <EnvelopeSimple size={24} />
-            minicactusgames@outlook.com
-          </li>
-        </ul>
-
-        <a
-          className="button"
-          target="_blank"
-          href="http://discordapp.com/users/443424863663947778"
-          rel="noreferrer"
-        >
-          <DiscordLogo size={24} />
-          Discord
-        </a>
-      </Section>
-
-      <Footer href="#games">
-        <a href="/news" target="_blank">
-          News
-        </a>
-        <a href="/privacy-policy" target="_blank">
-          Privacy Policy
-        </a>
+      <Footer>
+        <RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
       </Footer>
 
-      <BackToTopBtn href="#games" />
+      <BackToTopBtn to="games" />
     </>
   );
 }

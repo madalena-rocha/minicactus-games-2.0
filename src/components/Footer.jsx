@@ -1,8 +1,6 @@
 /* eslint-disable */
 
-import "./Footer.css";
-
-import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+import { Link } from "react-router-dom";
 
 import {
   InstagramLogo,
@@ -11,17 +9,21 @@ import {
   TwitterLogo,
 } from "phosphor-react";
 
-export function Footer({ href, children }) {
+import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+
+import "./Footer.css";
+
+export function Footer({ children }) {
   return (
     <footer>
       <div className="wrapper">
         <div className="col-a">
-          <a className="logo" href={href}>
+          <Link className="logo" to="/">
             <img
               src={minicactusGamesLogo}
               alt="Minicactus Games logo showing a cactus with a hanging control"
             />
-          </a>
+          </Link>
 
           <p>©2023 Minicactus Games </p>
           <p>CNPJ: 41.604.427/0001-86 </p>

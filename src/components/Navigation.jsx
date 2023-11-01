@@ -1,8 +1,7 @@
 /* eslint-disable */
 
-import "./Navigation.css";
-
-import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import {
   InstagramLogo,
@@ -13,22 +12,53 @@ import {
   X,
 } from "phosphor-react";
 
-export function Navigation({ href, menuClass, children }) {
-  const menuClassName = menuClass ? `menu ${menuClass}` : "menu";
+import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+
+import "./Navigation.css";
+
+export function Navigation({ menuClass, children }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuOpen(true);
+    document.body.classList.add("menu-expanded");
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove("menu-expanded");
+  };
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav id="navigation">
-      <div className="wrapper">
-        <a className="logo" href={href}>
+    <nav id="navigation" className={scrolling ? "scroll" : ""}>
+      <div className={`wrapper ${isMenuOpen ? "menu-expanded" : ""}`}>
+        <Link className="logo" to="/">
           <img
             src={minicactusGamesLogo}
             alt="Minicactus Games logo showing a cactus with a hanging control"
           />
 
           <h3>Minicactus Games</h3>
-        </a>
+        </Link>
 
-        <div className={menuClassName}>
+        <div className={menuClass ? `menu ${menuClass}` : "menu"}>
           {children}
 
           <a
@@ -86,19 +116,19 @@ export function Navigation({ href, menuClass, children }) {
         <button
           aria-expanded="false"
           aria-label="Abrir menu"
-          onClick="openMenu()"
+          onClick={openMenu}
           className="open-menu"
         >
-          <List size={24} />
+          <List size={29} color="#ffffff" />
         </button>
 
         <button
           aria-expanded="true"
           aria-label="Fechar menu"
-          onClick="closeMenu()"
+          onClick={closeMenu}
           className="close-menu"
         >
-          <X size={24} />
+          <X size={35} color="#ffffff" />
         </button>
       </div>
     </nav>

@@ -10,10 +10,7 @@ import { BackToTopBtn } from "../components/BackToTopBtn";
 export function PrivacyPolicy() {
   return (
     <>
-      <Navigation
-        href="https://www.minicactusgames.com/"
-        menuClass="short-menu"
-      />
+      <Navigation menuClass="short-menu" />
 
       <Section
         id="privacy-policy"
@@ -49,7 +46,7 @@ export function PrivacyPolicy() {
         </p>
 
         <p>
-          When you visit our website,
+          When you visit our website,{" "}
           <a
             target="_blank"
             href="https://www.minicactusgames.com/"
@@ -138,7 +135,7 @@ export function PrivacyPolicy() {
 
         <p>
           For any questions or concerns regarding this Privacy Policy, please
-          contact us at
+          contact us at{" "}
           <a
             target="_blank"
             href="mailto:contact@minicactusgames.com"
@@ -152,9 +149,9 @@ export function PrivacyPolicy() {
         <p>Thank you for trusting Minicactus Games with your privacy.</p>
       </Section>
 
-      <Footer href="https://www.minicactusgames.com/" />
+      <Footer />
 
-      <BackToTopBtn href="#privacy-policy" />
+      <BackToTopBtn to="privacy-policy" />
     </>
   );
 }

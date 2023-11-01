@@ -39,6 +39,10 @@ body {
   background-color: var(--body-color);
 }
 
+a {
+  cursor: pointer;
+}
+
 /*=== RESPONSIVO ========================*/
 
 @media (min-width: 1024px) {

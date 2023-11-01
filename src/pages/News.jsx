@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 import "./News.css";
 
 import { Navigation } from "../components/Navigation";
@@ -5,8 +7,6 @@ import { Section } from "../components/Section";
 import { New } from "../components/New";
 import { Footer } from "../components/Footer";
 import { BackToTopBtn } from "../components/BackToTopBtn";
-
-import { v4 as uuidv4 } from "uuid";
 
 import gamesPark from "../../src/assets/games-park.png";
 import freeAppsForMe from "../../src/assets/freeappsforme.png";
@@ -78,10 +78,7 @@ export function News() {
 
   return (
     <>
-      <Navigation
-        href="https://www.minicactusgames.com/"
-        menuClass="short-menu"
-      />
+      <Navigation menuClass="short-menu" />
 
       <Section id="news" title="News">
         <div className="cards">
@@ -100,9 +97,9 @@ export function News() {
         </div>
       </Section>
 
-      <Footer href="https://www.minicactusgames.com/" />
+      <Footer />
 
-      <BackToTopBtn href="#news" />
+      <BackToTopBtn to="news" />
     </>
   );
 }

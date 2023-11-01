@@ -1,13 +1,52 @@
 /* eslint-disable */
 
-import "./BackToTopBtn.css";
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 import { ArrowCircleUp } from "phosphor-react";
 
-export function BackToTopBtn({ href }) {
+import "./BackToTopBtn.css";
+
+export function BackToTopBtn({ to }) {
+  const [showBackToTopBtn, setShowBackToTopBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const backToTopButton = document.getElementById("backToTopButton");
+
+      if (window.scrollY > 550) {
+        setShowBackToTopBtn(true);
+
+        if (backToTopButton) {
+          backToTopButton.classList.add("show");
+        }
+      } else {
+        setShowBackToTopBtn(false);
+
+        if (backToTopButton) {
+          backToTopButton.classList.remove("show");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <a id="backToTopButton" href={href}>
-      <ArrowCircleUp size={40} />
-    </a>
+    showBackToTopBtn && (
+      <Link
+        id="backToTopButton"
+        to={to}
+        spy={true}
+        smooth={true}
+        offset={-72}
+        duration={500}
+      >
+        <ArrowCircleUp size={53} weight="thin" />
+      </Link>
+    )
   );
 }
