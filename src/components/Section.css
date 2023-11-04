@@ -1,0 +1,32 @@
+section {
+  padding-block: 10rem;
+}
+
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  text-transform: uppercase;
+
+  color: var(--headline);
+}
+
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--paragraph);
+}
+
+/*=== RESPONSIVO ========================*/
+
+@media (min-width: 1024px) {
+  section {
+    padding-block: 16rem;
+  }
+
+  section header h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+}

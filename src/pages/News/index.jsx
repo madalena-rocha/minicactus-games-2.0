@@ -1,18 +1,20 @@
+import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import ScrollReveal from "scrollreveal";
 
-import "./News.css";
+import "./styles.css";
 
-import { Navigation } from "../components/Navigation";
-import { Section } from "../components/Section";
-import { New } from "../components/New";
-import { Footer } from "../components/Footer";
-import { BackToTopBtn } from "../components/BackToTopBtn";
+import { Navigation } from "../../components/Navigation";
+import { Section } from "../../components/Section";
+import { New } from "../../components/New";
+import { Footer } from "../../components/Footer";
+import { BackToTopBtn } from "../../components/BackToTopBtn";
 
-import gamesPark from "../../src/assets/games-park.png";
-import freeAppsForMe from "../../src/assets/freeappsforme.png";
-import gamesKeys from "../../src/assets/games-keys.png";
-import eurogamer from "../../src/assets/eurogamer.png";
-import pcGamer from "../../src/assets/pc-gamer.png";
+import gamesPark from "../../../src/assets/games-park.png";
+import freeAppsForMe from "../../../src/assets/freeappsforme.png";
+import gamesKeys from "../../../src/assets/games-keys.png";
+import eurogamer from "../../../src/assets/eurogamer.png";
+import pcGamer from "../../../src/assets/pc-gamer.png";
 
 export function News() {
   const newsData = [
@@ -75,6 +77,24 @@ export function News() {
       title: "Underland: The Climb. Five new Steam games you probably missed",
     },
   ];
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "30px",
+      duration: 700,
+    });
+
+    const selectors = `
+      .cards, 
+      .card,
+      h3, 
+      a, 
+      p
+    `;
+
+    sr.reveal(selectors), { interval: 200 };
+  }, []);
 
   return (
     <>

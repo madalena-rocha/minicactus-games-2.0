@@ -1,14 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { App } from "./pages/App";
+import { ScrollToTop } from "./components/ScrolToTop";
+
+import { Home } from "./pages/Home";
 import { News } from "./pages/News";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 
 export function AppRoutes() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>

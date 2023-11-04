@@ -15,13 +15,14 @@
 
 <h2>🛠️ Tecnologias</h2>
 
-- ReactJS;
-- ReactDOM;
-- React Router DOM;
-- React Scroll;
-- UUID;
-- Phosphor Icons;
-- ViteJS.
+- ReactJS
+- ReactDOM
+- React Router DOM
+- React Scroll
+- Scroll Reveal
+- UUID
+- Phosphor Icons
+- ViteJS
 
 <h2>💜 Contato</h2>
 

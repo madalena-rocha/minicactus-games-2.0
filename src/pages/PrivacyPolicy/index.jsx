@@ -1,11 +1,32 @@
-import "./PrivacyPolicy.css";
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
-import { Navigation } from "../components/Navigation";
-import { Section } from "../components/Section";
-import { Footer } from "../components/Footer";
-import { BackToTopBtn } from "../components/BackToTopBtn";
+import "./styles.css";
+
+import { Navigation } from "../../components/Navigation";
+import { Section } from "../../components/Section";
+import { Footer } from "../../components/Footer";
+import { BackToTopBtn } from "../../components/BackToTopBtn";
 
 export function PrivacyPolicy() {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "30px",
+      duration: 700,
+    });
+
+    const selectors = `
+      h3,
+      p,
+      ul,
+      li,
+      a
+    `;
+
+    sr.reveal(selectors);
+  }, []);
+
   return (
     <>
       <Navigation menuClass="short-menu" />

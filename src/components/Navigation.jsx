@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import "./Navigation.css";
+
+import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+
 import {
   InstagramLogo,
   FacebookLogo,
@@ -10,11 +14,8 @@ import {
   X,
 } from "phosphor-react";
 
-import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
-
-import "./Navigation.css";
-
 export function Navigation({ menuClass, children }) {
+  // eslint-disable-next-line no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
@@ -46,7 +47,7 @@ export function Navigation({ menuClass, children }) {
 
   return (
     <nav id="navigation" className={scrolling ? "scroll" : ""}>
-      <div className={`wrapper ${isMenuOpen ? "menu-expanded" : ""}`}>
+      <div className="wrapper">
         <Link className="logo" to="/">
           <img
             src={minicactusGamesLogo}

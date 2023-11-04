@@ -15,3 +15,9 @@
   visibility: visible;
   transform: translateY(0);
 }
+
+/* Custom colors */
+
+#backToTopButton circle {
+  fill: #f5f5f5;
+}

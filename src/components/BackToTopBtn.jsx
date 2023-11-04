@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
-import { ArrowCircleUp } from "phosphor-react";
-
 import "./BackToTopBtn.css";
+
+import { ArrowCircleUp } from "phosphor-react";
 
 export function BackToTopBtn({ to }) {
   const [showBackToTopBtn, setShowBackToTopBtn] = useState(false);

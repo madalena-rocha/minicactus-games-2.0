@@ -39,8 +39,50 @@ body {
   background-color: var(--body-color);
 }
 
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 a {
   cursor: pointer;
+}
+
+.button {
+  background: var(--primary-color);
+
+  border: none;
+
+  padding: 1.6rem 3.2rem;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+
+  transition: background 200ms;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 /*=== RESPONSIVO ========================*/
@@ -50,5 +92,9 @@ a {
 
   body {
     overflow: auto;
+  }
+
+  .wrapper {
+    width: min(112rem, 100%);
   }
 }
