@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 export function PS4Btn({ href }) {
   return (
     <a className="button" target="_blank" href={href} rel="noreferrer">

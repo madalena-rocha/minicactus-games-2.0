@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 export function Game({ src, alt, title, description, children }) {
   return (
     <div className="card">

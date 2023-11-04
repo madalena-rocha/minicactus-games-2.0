@@ -1,3 +1,7 @@
+#news {
+  padding-top: calc(10rem + var(--nav-height));
+}
+
 #news header h2 {
   margin-bottom: 6rem;
 }

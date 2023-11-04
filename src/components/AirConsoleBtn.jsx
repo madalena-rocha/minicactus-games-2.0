@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import "./AirConsoleBtn.css";
 
 export function AirConsoleBtn({ href }) {

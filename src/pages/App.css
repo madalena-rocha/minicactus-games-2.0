@@ -177,7 +177,7 @@ body.menu-expanded button path {
 /*=== GAMES =============================*/
 
 #games {
-  padding-block: 0;
+  //padding-block: 0;
   padding-top: calc(10rem + var(--nav-height));
 }
 
@@ -198,8 +198,6 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-
-  margin-bottom: 10rem;
 }
 
 #games .card {

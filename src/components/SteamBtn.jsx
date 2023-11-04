@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 export function SteamBtn({ href }) {
   return (
     <a

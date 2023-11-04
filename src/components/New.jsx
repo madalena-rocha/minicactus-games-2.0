@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 export function New({ src, alt, href, details, title }) {
   return (
     <div className="card">

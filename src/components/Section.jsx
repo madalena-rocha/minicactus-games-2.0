@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 export function Section({ id, title, children }) {
   return (
     <section id={id}>

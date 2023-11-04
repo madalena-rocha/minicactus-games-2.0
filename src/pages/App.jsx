@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { useState } from "react";
 
 import { Element, Link as ScrollLink } from "react-scroll";
@@ -48,7 +46,10 @@ export function App() {
       description:
         "Survive the apocalypse! In 'Chase Survivors,' evolve your character and weapons to face hordes of gruesome creatures. Are you ready?",
       links: [
-        <SteamBtn href="https://store.steampowered.com/app/2195010/Chase_Survivors/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/2195010/Chase_Survivors/"
+        />,
       ],
     },
     {
@@ -59,8 +60,14 @@ export function App() {
       description:
         "Protect the cars on the road! You can approach the defense towers and equip them with various weapons to help you in the task. The hordes of criminals trying to destroy the cars get bigger and bigger as the level progresses.",
       links: [
-        <EpicGamesBtn href="https://store.epicgames.com/en-US/p/road-defense-outsiders-22e4ba" />,
-        <SteamBtn href="https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/" />,
+        <EpicGamesBtn
+          key="epic"
+          href="https://store.epicgames.com/en-US/p/road-defense-outsiders-22e4ba"
+        />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/"
+        />,
       ],
     },
     {
@@ -71,10 +78,22 @@ export function App() {
       description:
         "Use the elements at your disposal, such as excavators, pumps, plumbing, among others, to drill the soil to the indicated location. The dynamic scenario, fluid mechanics and the laws of physics must be manipulated correctly to achieve the goal. Find the city of Underland!",
       links: [
-        <NintendoSwitchBtn href="https://www.qubyteinteractive.com/games/underland/" />,
-        <PS4Btn href="https://store.playstation.com/pt-br/product/UP2158-CUSA29609_00-3707429945542009/" />,
-        <XboxOneBtn href="https://www.xbox.com/en-us/games/store/underland/9nl82ph84j87?activetab=pivot:overviewtab" />,
-        <SteamBtn href="https://store.steampowered.com/app/1528050/Underland/" />,
+        <NintendoSwitchBtn
+          key="nintendo-switch"
+          href="https://www.qubyteinteractive.com/games/underland/"
+        />,
+        <PS4Btn
+          key="ps4"
+          href="https://store.playstation.com/pt-br/product/UP2158-CUSA29609_00-3707429945542009/"
+        />,
+        <XboxOneBtn
+          key="xbox-one"
+          href="https://www.xbox.com/en-us/games/store/underland/9nl82ph84j87?activetab=pivot:overviewtab"
+        />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1528050/Underland/"
+        />,
       ],
     },
     {
@@ -85,10 +104,22 @@ export function App() {
       description:
         "The city of Underland was attacked by extraterrestrial creatures. The invaders issued a signal and now many of them are in the city. Help Ivy survive as she escapes to the Earth's surface. On her journey she must use various tools intelligently to be able to dig the ground, avoid acid and go through very strange constructions.",
       links: [
-        <NintendoSwitchBtn href="https://www.qubyteinteractive.com/games/underland-theclimb/#contact" />,
-        <PS4Btn href="https://store.playstation.com/pt-br/concept/10005086" />,
-        <XboxOneBtn href="https://www.xbox.com/en-us/games/store/underland-the-climb/9n7rvqlgjrg2" />,
-        <SteamBtn href="https://store.steampowered.com/app/1592340/Underland_The_Climb/" />,
+        <NintendoSwitchBtn
+          key="nintendo-switch"
+          href="https://www.qubyteinteractive.com/games/underland-theclimb/#contact"
+        />,
+        <PS4Btn
+          key="ps4"
+          href="https://store.playstation.com/pt-br/concept/10005086"
+        />,
+        <XboxOneBtn
+          key="xbox-one"
+          href="https://www.xbox.com/en-us/games/store/underland-the-climb/9n7rvqlgjrg2"
+        />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1592340/Underland_The_Climb/"
+        />,
       ],
     },
     {
@@ -99,8 +130,14 @@ export function App() {
       description:
         "Kitty is unable to reach her destination due to some rocks in her path. He could jump over the rocks, but he just doesn't want to do that, as he claims to be very tiring. So it's up to you to carry out the heavy labor for the comfort of this little kitten.",
       links: [
-        <NintendoSwitchBtn href="https://www.qubyteinteractive.com/games/unlock-the-cat/" />,
-        <SteamBtn href="https://store.steampowered.com/app/1554550/Unlock_The_Cat/" />,
+        <NintendoSwitchBtn
+          key="nintendo-switch"
+          href="https://www.qubyteinteractive.com/games/unlock-the-cat/"
+        />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1554550/Unlock_The_Cat/"
+        />,
       ],
     },
     {
@@ -111,10 +148,22 @@ export function App() {
       description:
         "Move the sliding tiles to unblock a path for the kitten to walk to the exit.",
       links: [
-        <NintendoSwitchBtn href="https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/" />,
-        <SteamBtn href="https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/" />,
-        <XboxOneBtn href="https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp" />,
-        <PS4Btn href="https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/" />,
+        <NintendoSwitchBtn
+          key="nintendo-switch"
+          href="https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/"
+        />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/"
+        />,
+        <XboxOneBtn
+          key="xbox-one"
+          href="https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp"
+        />,
+        <PS4Btn
+          key="ps4"
+          href="https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/"
+        />,
       ],
     },
     {
@@ -125,7 +174,10 @@ export function App() {
       description:
         "Let's avoid catfights on the roof? Draw a path for each cat to follow and keep them from bumping into each other along the way.",
       links: [
-        <SteamBtn href="https://store.steampowered.com/app/1942540/No_Cat_Fights_Here/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1942540/No_Cat_Fights_Here/"
+        />,
       ],
     },
     {
@@ -156,7 +208,10 @@ export function App() {
         </>,
       ],
       links: [
-        <SteamBtn href="https://store.steampowered.com/agecheck/app/2157100/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/agecheck/app/2157100/"
+        />,
       ],
     },
     {
@@ -166,9 +221,9 @@ export function App() {
       title: "Jigsaw Bestiary",
       description: [
         <>
-          Let's put the pieces together and meet amazing creatures. Here, the
-          true mythologies behind the monsters are explained after solving each
-          jigsaw. The beasts were illustrated by Alexandre Rocha{" "}
+          Let&apos;s put the pieces together and meet amazing creatures. Here,
+          the true mythologies behind the monsters are explained after solving
+          each jigsaw. The beasts were illustrated by Alexandre Rocha{" "}
           <a
             target="_blank"
             href="https://www.instagram.com/semdizer/"
@@ -180,7 +235,10 @@ export function App() {
         </>,
       ],
       links: [
-        <SteamBtn href="https://store.steampowered.com/app/1889650/Jigsaw_Bestiary/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1889650/Jigsaw_Bestiary/"
+        />,
       ],
     },
     {
@@ -191,7 +249,10 @@ export function App() {
       description:
         "Mining Cats is a type of logic puzzle that involves blasting rocks and creating paths that connect mines of gemstones of the same color.",
       links: [
-        <SteamBtn href="https://store.steampowered.com/app/1837920/Mining_Cats/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1837920/Mining_Cats/"
+        />,
       ],
     },
     {
@@ -202,7 +263,10 @@ export function App() {
       description:
         "Help the kitten rotate the pipes to bring water to his farm. The more the kitten plants, the more money he has to fulfill his dreams as a cat.",
       links: [
-        <SteamBtn href="https://store.steampowered.com/app/1721270/Farm_Kitten__Puzzle_Pipes/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1721270/Farm_Kitten__Puzzle_Pipes/"
+        />,
       ],
     },
     {
@@ -213,7 +277,10 @@ export function App() {
       description:
         "Set up a schedule for your character to take pills at the right time and in the right order. The side effects of the pills make him jump, walk, run. Then press Play. The character starts performing the action that each pill causes at the exact time he takes it. Reach the highlighted area. Survive!",
       links: [
-        <SteamBtn href="https://store.steampowered.com/agecheck/app/1752610/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/agecheck/app/1752610/"
+        />,
       ],
     },
     {
@@ -224,7 +291,10 @@ export function App() {
       description:
         "Control a spaceship and attempts to land safely on blue platforms. You can move the ship and burn fuel to fire a thruster, attempting to gently land on marked areas. A new scenario is loaded after every successful landing.",
       links: [
-        <SteamBtn href="https://store.steampowered.com/app/1481140/Lost_Astronaut/" />,
+        <SteamBtn
+          key="steam"
+          href="https://store.steampowered.com/app/1481140/Lost_Astronaut/"
+        />,
       ],
     },
     {
@@ -234,10 +304,16 @@ export function App() {
       title: "Ludo",
       description:
         "Ludo is a strategy board game, in which the players race their four piece from start to finish according to the rolls of a single die. Ludo is derived from the Indian game Pachisi, but simpler. The game and its variations are popular in many countries and under various names.",
-      links: [<AirConsoleBtn href="https://www.airconsole.com/play/ludo" />],
+      links: [
+        <AirConsoleBtn
+          key="air-console"
+          href="https://www.airconsole.com/play/ludo"
+        />,
+      ],
     },
   ];
 
+  // eslint-disable-next-line no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => {
@@ -286,7 +362,9 @@ export function App() {
             </ScrollLink>
           </li>
           <li>
-            <RouterLink to="/news">News</RouterLink>
+            <RouterLink to="/news" onClick={() => closeMenu()}>
+              News
+            </RouterLink>
           </li>
         </ul>
       </Navigation>

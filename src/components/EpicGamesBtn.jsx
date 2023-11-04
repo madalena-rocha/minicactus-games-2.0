@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import "./EpicGamesBtn.css";
 
 export function EpicGamesBtn({ href }) {

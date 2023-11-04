@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import "./PrivacyPolicy.css";
 
 import { Navigation } from "../components/Navigation";
@@ -60,9 +58,10 @@ export function PrivacyPolicy() {
         </p>
 
         <p>
-          If you contact us through our website's form or via email, we collect
-          your email address and any other personal information you choose to
-          provide. We use this information solely to respond to your inquiries.
+          If you contact us through our website&apos;s form or via email, we
+          collect your email address and any other personal information you
+          choose to provide. We use this information solely to respond to your
+          inquiries.
         </p>
 
         <h3>Data Usage</h3>
@@ -107,7 +106,7 @@ export function PrivacyPolicy() {
           to safeguard your information from loss, theft, and misuse.
         </p>
 
-        <h3>Children's Privacy</h3>
+        <h3>Children&apos;s Privacy</h3>
 
         <p>
           We do not knowingly collect personal information from children under

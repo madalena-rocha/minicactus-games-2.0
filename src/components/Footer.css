@@ -5,6 +5,10 @@ footer {
   text-align: left;
 }
 
+.col-a {
+  margin-bottom: 3.2rem;
+}
+
 footer .logo {
   display: inline-block;
   margin-bottom: 2.4rem;
@@ -17,8 +21,6 @@ footer .logo img {
 footer p {
   color: var(--paragraph);
   line-height: 2;
-
-  //margin-bottom: 3.2rem;
 }
 
 footer a {

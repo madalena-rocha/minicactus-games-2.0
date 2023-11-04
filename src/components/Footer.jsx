@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { Link } from "react-router-dom";
 
 import {

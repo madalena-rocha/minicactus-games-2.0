@@ -15,12 +15,10 @@
 
 <h2>🛠️ Tecnologias</h2>
 
-- HTML;
-- CSS;
-- JavaScript;
 - ReactJS;
 - ReactDOM;
 - React Router DOM;
+- React Scroll;
 - UUID;
 - Phosphor Icons;
 - ViteJS.
