@@ -1,4 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+import "./Footer.css";
+
+import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
 
 import {
   InstagramLogo,
@@ -7,16 +11,20 @@ import {
   TwitterLogo,
 } from "phosphor-react";
 
-import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
-
-import "./Footer.css";
-
 export function Footer({ children }) {
+  const location = useLocation();
+
+  const handleLinkClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <footer>
       <div className="wrapper">
         <div className="col-a">
-          <Link className="logo" to="/">
+          <Link className="logo" to="/" onClick={handleLinkClick}>
             <img
               src={minicactusGamesLogo}
               alt="Minicactus Games logo showing a cactus with a hanging control"

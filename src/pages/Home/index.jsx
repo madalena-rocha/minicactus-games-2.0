@@ -477,12 +477,16 @@ export function Home() {
 
             <li>
               <EnvelopeSimple size={24} />
-              contact@minicactusgames.com
+              <a href="mailto:contact@minicactusgames.com">
+                contact@minicactusgames.com
+              </a>
             </li>
 
             <li>
               <EnvelopeSimple size={24} />
-              minicactusgames@outlook.com
+              <a href="mailto:minicactusgames@outlook.com">
+                minicactusgames@outlook.com
+              </a>
             </li>
           </ul>
 

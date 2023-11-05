@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { ScrollToTop } from "./components/ScrolToTop";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 import { Home } from "./pages/Home";
 import { News } from "./pages/News";

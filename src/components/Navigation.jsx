@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "./Navigation.css";
 
@@ -45,10 +45,18 @@ export function Navigation({ menuClass, children }) {
     };
   }, []);
 
+  const location = useLocation();
+
+  const handleLinkClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <nav id="navigation" className={scrolling ? "scroll" : ""}>
       <div className="wrapper">
-        <Link className="logo" to="/">
+        <Link className="logo" to="/" onClick={handleLinkClick}>
           <img
             src={minicactusGamesLogo}
             alt="Minicactus Games logo showing a cactus with a hanging control"

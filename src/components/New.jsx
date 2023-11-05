@@ -1,13 +1,13 @@
 export function New({ src, alt, href, details, title }) {
   return (
-    <div className="card">
+    <a className="card" target="_blank" href={href} rel="noreferrer">
       <img src={src} alt={alt} />
 
-      <a className="new" target="_blank" href={href} rel="noreferrer">
+      <div className="new">
         <p>{details}</p>
 
         <h3>{title}</h3>
-      </a>
-    </div>
+      </div>
+    </a>
   );
 }

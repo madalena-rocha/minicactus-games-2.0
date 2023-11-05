@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import ScrollReveal from "scrollreveal";
 
@@ -22,7 +23,7 @@ export function News() {
       id: uuidv4(),
       src: gamesPark,
       alt: "Gamespark written in blue on a white background, with the letter s in the shape of a lightning bolt.",
-      href: "https://www.gamespark.jp/article/2023/05/29/130405.html",
+      href: "https://www.gamespark.jp/article/2023/05/30/130456.html",
       details: "Published: 29th May 2023",
       title:
         "Article written for RIKUSYO, by GameSpark, about the release of Road Defense: Outsiders",
@@ -117,7 +118,9 @@ export function News() {
         </div>
       </Section>
 
-      <Footer />
+      <Footer>
+        <Link to="/privacy-policy">Privacy Policy</Link>
+      </Footer>
 
       <BackToTopBtn to="news" />
     </>
