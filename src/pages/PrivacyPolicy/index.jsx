@@ -29,7 +29,7 @@ export function PrivacyPolicy() {
 
   return (
     <>
-      <Navigation menuClass="short-menu" />
+      <Navigation />
 
       <Section
         id="privacy-policy"

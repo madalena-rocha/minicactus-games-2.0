@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 
-import "./Footer.css";
+import "./styles.css";
 
-import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 
 import {
   InstagramLogo,
@@ -11,11 +11,17 @@ import {
   TwitterLogo,
 } from "phosphor-react";
 
-export function Footer({ children }) {
+export function Footer() {
   const location = useLocation();
 
-  const handleLinkClick = () => {
+  const handleLogoClick = () => {
     if (location.pathname === "/") {
+      window.scrollTo(0, 0);
+    }
+  };
+
+  const handlePrivacyPolicyClick = () => {
+    if (location.pathname === "/privacy-policy") {
       window.scrollTo(0, 0);
     }
   };
@@ -24,7 +30,7 @@ export function Footer({ children }) {
     <footer>
       <div className="wrapper">
         <div className="col-a">
-          <Link className="logo" to="/" onClick={handleLinkClick}>
+          <Link className="logo" to="/" onClick={handleLogoClick}>
             <img
               src={minicactusGamesLogo}
               alt="Minicactus Games logo showing a cactus with a hanging control"
@@ -33,7 +39,10 @@ export function Footer({ children }) {
 
           <p>©2023 Minicactus Games </p>
           <p>CNPJ: 41.604.427/0001-86 </p>
-          {children}
+
+          <Link to="/privacy-policy" onClick={handlePrivacyPolicyClick}>
+            Privacy Policy
+          </Link>
         </div>
 
         <div className="col-b">

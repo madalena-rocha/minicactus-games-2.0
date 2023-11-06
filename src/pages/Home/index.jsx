@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import { v4 as uuidv4 } from "uuid";
 import ScrollReveal from "scrollreveal";
@@ -502,9 +501,7 @@ export function Home() {
         </Section>
       </Element>
 
-      <Footer>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-      </Footer>
+      <Footer />
 
       <BackToTopBtn to="games" />
     </>

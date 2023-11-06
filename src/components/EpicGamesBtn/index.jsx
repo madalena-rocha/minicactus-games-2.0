@@ -1,4 +1,4 @@
-import "./EpicGamesBtn.css";
+import "./styles.css";
 
 export function EpicGamesBtn({ href }) {
   return (

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
-import "./BackToTopBtn.css";
+import "./styles.css";
 
 import { ArrowCircleUp } from "phosphor-react";
 

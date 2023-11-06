@@ -1,4 +1,4 @@
-import "./AirConsoleBtn.css";
+import "./styles.css";
 
 export function AirConsoleBtn({ href }) {
   return (

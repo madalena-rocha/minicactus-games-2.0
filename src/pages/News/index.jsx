@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import ScrollReveal from "scrollreveal";
 
@@ -99,7 +98,7 @@ export function News() {
 
   return (
     <>
-      <Navigation menuClass="short-menu" />
+      <Navigation />
 
       <Section id="news" title="News">
         <div className="cards">
@@ -118,9 +117,7 @@ export function News() {
         </div>
       </Section>
 
-      <Footer>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-      </Footer>
+      <Footer />
 
       <BackToTopBtn to="news" />
     </>

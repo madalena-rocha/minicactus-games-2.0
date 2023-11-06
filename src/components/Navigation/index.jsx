@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import "./Navigation.css";
+import "./styles.css";
 
-import minicactusGamesLogo from "../assets/minicactus-games-logo.png";
+import { Menu } from "../Menu";
+
+import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 
 import {
   InstagramLogo,
@@ -14,10 +16,11 @@ import {
   X,
 } from "phosphor-react";
 
-export function Navigation({ menuClass, children }) {
+export function Navigation() {
   // eslint-disable-next-line no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const location = useLocation();
 
   const openMenu = () => {
     setIsMenuOpen(true);
@@ -45,9 +48,7 @@ export function Navigation({ menuClass, children }) {
     };
   }, []);
 
-  const location = useLocation();
-
-  const handleLinkClick = () => {
+  const handleLogoClick = () => {
     if (location.pathname === "/") {
       window.scrollTo(0, 0);
     }
@@ -56,7 +57,7 @@ export function Navigation({ menuClass, children }) {
   return (
     <nav id="navigation" className={scrolling ? "scroll" : ""}>
       <div className="wrapper">
-        <Link className="logo" to="/" onClick={handleLinkClick}>
+        <Link className="logo" to="/" onClick={handleLogoClick}>
           <img
             src={minicactusGamesLogo}
             alt="Minicactus Games logo showing a cactus with a hanging control"
@@ -65,8 +66,8 @@ export function Navigation({ menuClass, children }) {
           <h3>Minicactus Games</h3>
         </Link>
 
-        <div className={menuClass ? `menu ${menuClass}` : "menu"}>
-          {children}
+        <div className="menu">
+          <Menu closeMenu={closeMenu} />
 
           <a
             className="button"

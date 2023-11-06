@@ -1,27 +1,22 @@
-import { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
-import "./Menu.css";
+export function Menu({ closeMenu }) {
+  const location = useLocation();
 
-export function Menu() {
-  // eslint-disable-next-line no-unused-vars
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    document.body.classList.remove("menu-expanded");
+  const scrollLinkConfig = {
+    spy: true,
+    smooth: true,
+    offset: -72,
+    duration: 500,
   };
 
-  return (
+  return location.pathname === "/" ? (
     <ul>
       <li>
         <ScrollLink
           to="games"
-          spy={true}
-          smooth={true}
-          offset={-72}
-          duration={500}
+          {...scrollLinkConfig}
           onClick={() => closeMenu()}
         >
           Games
@@ -30,10 +25,7 @@ export function Menu() {
       <li>
         <ScrollLink
           to="about"
-          spy={true}
-          smooth={true}
-          offset={-72}
-          duration={500}
+          {...scrollLinkConfig}
           onClick={() => closeMenu()}
         >
           About
@@ -42,10 +34,7 @@ export function Menu() {
       <li>
         <ScrollLink
           to="contact"
-          spy={true}
-          smooth={true}
-          offset={-72}
-          duration={500}
+          {...scrollLinkConfig}
           onClick={() => closeMenu()}
         >
           Contact
@@ -53,6 +42,33 @@ export function Menu() {
       </li>
       <li>
         <RouterLink to="/news" onClick={() => closeMenu()}>
+          News
+        </RouterLink>
+      </li>
+    </ul>
+  ) : (
+    <ul>
+      <li>
+        <RouterLink to="/" onClick={() => closeMenu()}>
+          Games
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/" onClick={() => closeMenu()}>
+          About
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/" onClick={() => closeMenu()}>
+          Contact
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink
+          to="/news"
+          className={location.pathname === "/news" ? "active" : ""}
+          onClick={() => closeMenu()}
+        >
           News
         </RouterLink>
       </li>
