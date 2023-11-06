@@ -9,6 +9,7 @@ export function Menu({ closeMenu }) {
     smooth: true,
     offset: -72,
     duration: 500,
+    tabIndex: 0,
   };
 
   return location.pathname === "/" ? (

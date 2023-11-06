@@ -42,6 +42,8 @@ export function BackToTopBtn({ to }) {
         smooth={true}
         offset={-72}
         duration={500}
+        aria-label="Back to top"
+        tabIndex="0"
       >
         <ArrowCircleUp size={53} weight="thin" />
       </Link>

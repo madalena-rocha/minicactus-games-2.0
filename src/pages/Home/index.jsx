@@ -12,7 +12,6 @@ import { PS4Btn } from "../../components/PS4Btn";
 import { XboxOneBtn } from "../../components/XboxOneBtn";
 import { AirConsoleBtn } from "../../components/AirConsoleBtn";
 import { Navigation } from "../../components/Navigation";
-import { Menu } from "../../components/Menu";
 import { Section } from "../../components/Section";
 import { Game } from "../../components/Game";
 import { Footer } from "../../components/Footer";
@@ -417,9 +416,7 @@ export function Home() {
 
   return (
     <>
-      <Navigation>
-        <Menu />
-      </Navigation>
+      <Navigation />
 
       <Element name="games">
         <Section

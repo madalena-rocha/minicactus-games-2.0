@@ -4,17 +4,11 @@ import { Link, useLocation } from "react-router-dom";
 import "./styles.css";
 
 import { Menu } from "../Menu";
+import { SocialLinks } from "../SocialLinks";
 
 import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 
-import {
-  InstagramLogo,
-  FacebookLogo,
-  YoutubeLogo,
-  TwitterLogo,
-  List,
-  X,
-} from "phosphor-react";
+import { List, X } from "phosphor-react";
 
 export function Navigation() {
   // eslint-disable-next-line no-unused-vars
@@ -78,47 +72,7 @@ export function Navigation() {
             Follow The Steam Page
           </a>
 
-          <ul className="social-links">
-            <li>
-              <a
-                target="_blank"
-                href="https://www.instagram.com/minicactusgames/"
-                rel="noreferrer"
-              >
-                <InstagramLogo size={24} />
-              </a>
-            </li>
-
-            <li>
-              <a
-                target="_blank"
-                href="https://www.facebook.com/minicactusgames"
-                rel="noreferrer"
-              >
-                <FacebookLogo size={24} />
-              </a>
-            </li>
-
-            <li>
-              <a
-                target="_blank"
-                href="https://www.youtube.com/channel/UCPaNusJeoBWGPwrD-MCBYrw/featured"
-                rel="noreferrer"
-              >
-                <YoutubeLogo size={24} />
-              </a>
-            </li>
-
-            <li>
-              <a
-                target="_blank"
-                href="https://twitter.com/minicactusgames"
-                rel="noreferrer"
-              >
-                <TwitterLogo size={24} />
-              </a>
-            </li>
-          </ul>
+          <SocialLinks />
         </div>
 
         <button

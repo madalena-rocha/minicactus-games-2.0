@@ -80,13 +80,6 @@ a {
   transition: background 200ms;
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
-
 /*=== MENU-EXPANDED =====================*/
 
 body.menu-expanded {

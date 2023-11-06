@@ -8,6 +8,8 @@
 
   transform: translateY(100%);
   transition: 200ms;
+
+  display: flex;
 }
 
 #backToTopButton.show {
