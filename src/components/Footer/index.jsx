@@ -35,9 +35,11 @@ export function Footer() {
           <p>©2023 Minicactus Games </p>
           <p>CNPJ: 41.604.427/0001-86 </p>
 
-          <Link to="/privacy-policy" onClick={handlePrivacyPolicyClick}>
-            Privacy Policy
-          </Link>
+          <p>
+            <Link to="/privacy-policy" onClick={handlePrivacyPolicyClick}>
+              Privacy Policy
+            </Link>
+          </p>
         </div>
 
         <div className="col-b">

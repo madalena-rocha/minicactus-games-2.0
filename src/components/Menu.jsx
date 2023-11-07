@@ -1,4 +1,5 @@
 import { Link as RouterLink, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Link as ScrollLink } from "react-scroll";
 
 export function Menu({ closeMenu }) {
@@ -50,19 +51,28 @@ export function Menu({ closeMenu }) {
   ) : (
     <ul>
       <li>
-        <RouterLink to="/" onClick={() => closeMenu()}>
+        <HashLink
+          to="/#games"
+          onClick={() => closeMenu()}
+        >
           Games
-        </RouterLink>
+        </HashLink>
       </li>
       <li>
-        <RouterLink to="/" onClick={() => closeMenu()}>
+        <HashLink
+          to="/#about"
+          onClick={() => closeMenu()}
+        >
           About
-        </RouterLink>
+        </HashLink>
       </li>
       <li>
-        <RouterLink to="/" onClick={() => closeMenu()}>
+        <HashLink
+          to="/#contact"
+          onClick={() => closeMenu()}
+        >
           Contact
-        </RouterLink>
+        </HashLink>
       </li>
       <li>
         <RouterLink

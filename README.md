@@ -7,17 +7,18 @@
 
 <h2>💻 Projeto</h2>
 
-<a target="_blank" href="https://www.linkedin.com/pulse/adapta%25C3%25A7%25C3%25A3o-do-projeto-desenvolvido-na-nlw-da-para-site-machado-rocha/?trackingId=7J2SOoIfQFOO8ncz8H9LAA%3D%3D">Artigo no LinkedIn</a>
+Este repositório contém a segunda versão do site da Minicactus Games, criada utilizando ReactJS. A versão inicial do projeto, desenvolvida com HTML, CSS e JavaScript, pode ser encontrada [aqui](https://github.com/madalena-rocha/minicactus-games).
 
 ![Site da Minicactus Games](./public/minicactus-games.png)
 
-[🔗 Acesse aqui](https://www.minicactusgames.com/)
+[🔗 Site da Minicactus Games](https://www.minicactusgames.com/)
 
 <h2>🛠️ Tecnologias</h2>
 
 - ReactJS
 - ReactDOM
 - React Router DOM
+- React Router Hash Link
 - React Scroll
 - Scroll Reveal
 - UUID

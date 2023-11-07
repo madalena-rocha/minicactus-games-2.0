@@ -403,12 +403,21 @@ export function Home() {
     });
 
     const selectors = `
-      .cards,
-      h3,
-      p,
-      a,
-      li,
-      .button
+      #navigation .logo,
+      #navigation ul,
+      #navigation .button,
+      #games .cards,
+      #games .card,
+      #games .card h3,
+      #games .card p,
+      #games .button,
+      #about p,
+      #contact ul,
+      #contact li,
+      #contact .button,
+      footer p,
+      footer ul,
+      footer li
     `;
 
     sr.reveal(selectors);

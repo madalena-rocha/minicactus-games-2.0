@@ -86,14 +86,19 @@ export function News() {
     });
 
     const selectors = `
-      .cards, 
-      .card,
-      h3, 
-      a, 
-      p
+      #navigation .logo,
+      #navigation ul,
+      #navigation .button,
+      #news .cards,
+      #news .card,
+      #news .card p,
+      #news .card h3,
+      footer p,
+      footer ul,
+      footer li
     `;
 
-    sr.reveal(selectors), { interval: 200 };
+    sr.reveal(selectors);
   }, []);
 
   return (
