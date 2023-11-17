@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Element } from "react-scroll";
 import { v4 as uuidv4 } from "uuid";
-import ScrollReveal from "scrollreveal";
+
+import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -395,27 +395,17 @@ export function Home() {
     },
   ];
 
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "30px",
-      duration: 700,
-    });
-
-    const selectors = `
-      #games .cards,
-      #games .card,
-      #games .card h3,
-      #games .card p,
-      #games .button,
-      #about p,
-      #contact ul,
-      #contact li,
-      #contact .button
-    `;
-
-    sr.reveal(selectors);
-  }, []);
+  useScrollReveal(`
+    #games .cards,
+    #games .card,
+    #games .card h3,
+    #games .card p,
+    #games .button,
+    #about p,
+    #contact ul,
+    #contact li,
+    #contact .button
+  `);
 
   return (
     <>

@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
+import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -9,22 +8,12 @@ import { Footer } from "../../components/Footer";
 import { BackToTopBtn } from "../../components/BackToTopBtn";
 
 export function PrivacyPolicy() {
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "30px",
-      duration: 700,
-    });
-
-    const selectors = `
-      #privacy-policy h3,
-      #privacy-policy p,
-      #privacy-policy ul,
-      #privacy-policy li
-    `;
-
-    sr.reveal(selectors);
-  }, []);
+  useScrollReveal(`
+    #privacy-policy h3,
+    #privacy-policy p,
+    #privacy-policy ul,
+    #privacy-policy li
+  `);
 
   return (
     <>

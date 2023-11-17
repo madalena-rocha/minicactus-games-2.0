@@ -1,4 +1,4 @@
-#backToTopButton {
+.backToTopButton {
   position: fixed;
   bottom: 1rem;
   right: 2.5rem;
@@ -12,7 +12,7 @@
   display: flex;
 }
 
-#backToTopButton.show {
+.backToTopButton.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -20,7 +20,7 @@
 
 /* Custom colors */
 
-#backToTopButton circle {
+.backToTopButton circle {
   fill: #f5f5f5;
   stroke: #f5f5f5;
 }

@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ScrollReveal from "scrollreveal";
+
+import { useScrollEffect } from "../../utils/useScrollEffect";
+import { handleLinkClick } from "../../utils/handleLinkClick";
+import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -12,53 +15,37 @@ import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 import { List, X } from "phosphor-react";
 
 export function Navigation() {
+  // eslint-disable-next-line no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const { pathname } = useLocation();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    document.body.classList.toggle("menu-expanded");
+  const openMenu = () => {
+    setIsMenuOpen(true);
+    document.body.classList.add("menu-expanded");
   };
 
-  useEffect(() => {
-    function handleScroll() {
-      setScrolling(window.scrollY > 0);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleLinkClick = (path) => {
-    if (pathname === path) {
-      window.scrollTo(0, 0);
-    }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove("menu-expanded");
   };
 
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "30px",
-      duration: 700,
-    });
+  useScrollEffect(setScrolling);
 
-    const selectors = `
-      #navigation .logo,
-      #navigation ul,
-      #navigation .button
-    `;
-
-    sr.reveal(selectors);
-  }, []);
+  useScrollReveal(`
+    #navigation .logo,
+    #navigation ul,
+    #navigation .button
+  `);
 
   return (
     <nav id="navigation" className={scrolling ? "scroll" : ""}>
       <div className="wrapper">
-        <Link className="logo" to="/" onClick={() => handleLinkClick("/")}>
+        <Link
+          className="logo"
+          to="/"
+          onClick={() => handleLinkClick("/", pathname)}
+        >
           <img
             src={minicactusGamesLogo}
             alt="Minicactus Games logo showing a cactus with a hanging control"
@@ -68,7 +55,7 @@ export function Navigation() {
         </Link>
 
         <div className="menu">
-          <Menu closeMenu={toggleMenu} />
+          <Menu closeMenu={closeMenu} />
 
           <a
             className="button"
@@ -83,16 +70,21 @@ export function Navigation() {
         </div>
 
         <button
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-          onClick={toggleMenu}
-          className={isMenuOpen ? "close-menu" : "open-menu"}
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onClick={openMenu}
+          className="open-menu"
         >
-          {isMenuOpen ? (
-            <X size={35} color="#ffffff" />
-          ) : (
-            <List size={29} color="#ffffff" />
-          )}
+          <List size={29} color="#ffffff" />
+        </button>
+
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onClick={closeMenu}
+          className="close-menu"
+        >
+          <X size={35} color="#ffffff" />
         </button>
       </div>
     </nav>

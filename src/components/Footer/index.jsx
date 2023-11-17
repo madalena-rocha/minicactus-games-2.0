@@ -1,6 +1,7 @@
-import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ScrollReveal from "scrollreveal";
+
+import { handleLinkClick } from "../../utils/handleLinkClick";
+import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -11,33 +12,21 @@ import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 export function Footer() {
   const { pathname } = useLocation();
 
-  const handleLinkClick = (path) => {
-    if (pathname === path) {
-      window.scrollTo(0, 0);
-    }
-  };
-
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "30px",
-      duration: 700,
-    });
-
-    const selectors = `
-      footer p,
-      footer ul,
-      footer li
-    `;
-
-    sr.reveal(selectors);
-  }, []);
+  useScrollReveal(`
+    footer p,
+    footer ul,
+    footer li
+  `);
 
   return (
     <footer>
       <div className="wrapper">
         <div className="col-a">
-          <Link className="logo" to="/" onClick={() => handleLinkClick("/")}>
+          <Link
+            className="logo"
+            to="/"
+            onClick={() => handleLinkClick("/", pathname)}
+          >
             <img
               src={minicactusGamesLogo}
               alt="Minicactus Games logo showing a cactus with a hanging control"
@@ -50,7 +39,7 @@ export function Footer() {
           <p>
             <Link
               to="/privacy-policy"
-              onClick={() => handleLinkClick("/privacy-policy")}
+              onClick={() => handleLinkClick("/privacy-policy", pathname)}
             >
               Privacy Policy
             </Link>

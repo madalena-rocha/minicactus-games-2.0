@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import ScrollReveal from "scrollreveal";
+
+import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -78,22 +78,12 @@ export function News() {
     },
   ];
 
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "30px",
-      duration: 700,
-    });
-
-    const selectors = `
-      #news .cards,
-      #news .card,
-      #news .card p,
-      #news .card h3
-    `;
-
-    sr.reveal(selectors);
-  }, []);
+  useScrollReveal(`
+    #news .cards,
+    #news .card,
+    #news .card p,
+    #news .card h3
+  `);
 
   return (
     <>

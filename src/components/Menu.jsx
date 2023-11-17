@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Link as ScrollLink } from "react-scroll";
-import ScrollReveal from "scrollreveal";
 
 export function Menu({ closeMenu }) {
   const { pathname } = useLocation();
@@ -14,22 +12,6 @@ export function Menu({ closeMenu }) {
     duration: 500,
     tabIndex: 0,
   };
-
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "30px",
-      duration: 700,
-    });
-
-    const selectors = `
-      ul,
-      li,
-      a
-    `;
-
-    sr.reveal(selectors);
-  }, []);
 
   return pathname === "/" ? (
     <ul>
