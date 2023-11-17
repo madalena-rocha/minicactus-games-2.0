@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ScrollReveal from "scrollreveal";
 
 import "./styles.css";
 
@@ -11,28 +12,18 @@ import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 import { List, X } from "phosphor-react";
 
 export function Navigation() {
-  // eslint-disable-next-line no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
-  const openMenu = () => {
-    setIsMenuOpen(true);
-    document.body.classList.add("menu-expanded");
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    document.body.classList.remove("menu-expanded");
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle("menu-expanded");
   };
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 0);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -42,16 +33,32 @@ export function Navigation() {
     };
   }, []);
 
-  const handleLogoClick = () => {
-    if (location.pathname === "/") {
+  const handleLinkClick = (path) => {
+    if (pathname === path) {
       window.scrollTo(0, 0);
     }
   };
 
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "30px",
+      duration: 700,
+    });
+
+    const selectors = `
+      #navigation .logo,
+      #navigation ul,
+      #navigation .button
+    `;
+
+    sr.reveal(selectors);
+  }, []);
+
   return (
     <nav id="navigation" className={scrolling ? "scroll" : ""}>
       <div className="wrapper">
-        <Link className="logo" to="/" onClick={handleLogoClick}>
+        <Link className="logo" to="/" onClick={() => handleLinkClick("/")}>
           <img
             src={minicactusGamesLogo}
             alt="Minicactus Games logo showing a cactus with a hanging control"
@@ -61,7 +68,7 @@ export function Navigation() {
         </Link>
 
         <div className="menu">
-          <Menu closeMenu={closeMenu} />
+          <Menu closeMenu={toggleMenu} />
 
           <a
             className="button"
@@ -76,21 +83,16 @@ export function Navigation() {
         </div>
 
         <button
-          aria-expanded="false"
-          aria-label="Abrir menu"
-          onClick={openMenu}
-          className="open-menu"
+          aria-expanded={isMenuOpen}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          onClick={toggleMenu}
+          className={isMenuOpen ? "close-menu" : "open-menu"}
         >
-          <List size={29} color="#ffffff" />
-        </button>
-
-        <button
-          aria-expanded="true"
-          aria-label="Fechar menu"
-          onClick={closeMenu}
-          className="close-menu"
-        >
-          <X size={35} color="#ffffff" />
+          {isMenuOpen ? (
+            <X size={35} color="#ffffff" />
+          ) : (
+            <List size={29} color="#ffffff" />
+          )}
         </button>
       </div>
     </nav>

@@ -1,19 +1,19 @@
-#epic-games svg {
+.epic-games svg {
   height: 70%;
 }
 
-#epic-games svg path:first-child {
+.epic-games svg path:first-child {
   fill: var(--primary-color);
 }
 
-#epic-games svg path:last-child {
+.epic-games svg path:last-child {
   fill: var(--secondary-color);
 }
 
-#epic-games:hover svg path:first-child {
+.epic-games:hover svg path:first-child {
   fill: var(--secondary-color);
 }
 
-#epic-games:hover svg path:last-child {
+.epic-games:hover svg path:last-child {
   fill: var(--body-color);
 }

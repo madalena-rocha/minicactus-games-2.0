@@ -3,8 +3,7 @@ import "./styles.css";
 export function EpicGamesBtn({ href }) {
   return (
     <a
-      className="button"
-      id="epic-games"
+      className="button epic-games"
       target="_blank"
       href={href}
       rel="noreferrer"

@@ -17,16 +17,10 @@ export function PrivacyPolicy() {
     });
 
     const selectors = `
-      #navigation .logo,
-      #navigation ul,
-      #navigation .button,
       #privacy-policy h3,
       #privacy-policy p,
       #privacy-policy ul,
-      #privacy-policy li,
-      footer p,
-      footer ul,
-      footer li
+      #privacy-policy li
     `;
 
     sr.reveal(selectors);

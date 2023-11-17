@@ -86,16 +86,10 @@ export function News() {
     });
 
     const selectors = `
-      #navigation .logo,
-      #navigation ul,
-      #navigation .button,
       #news .cards,
       #news .card,
       #news .card p,
-      #news .card h3,
-      footer p,
-      footer ul,
-      footer li
+      #news .card h3
     `;
 
     sr.reveal(selectors);

@@ -23,11 +23,6 @@ footer p {
   line-height: 2;
 }
 
-footer a {
-  color: var(--paragraph);
-  text-decoration: none;
-}
-
 footer .social-links {
   justify-content: flex-start;
 }

@@ -7,4 +7,5 @@
 
 .social-links li a {
   display: flex;
+  color: var(--paragraph);
 }

@@ -403,9 +403,6 @@ export function Home() {
     });
 
     const selectors = `
-      #navigation .logo,
-      #navigation ul,
-      #navigation .button,
       #games .cards,
       #games .card,
       #games .card h3,
@@ -414,10 +411,7 @@ export function Home() {
       #about p,
       #contact ul,
       #contact li,
-      #contact .button,
-      footer p,
-      footer ul,
-      footer li
+      #contact .button
     `;
 
     sr.reveal(selectors);

@@ -3,8 +3,7 @@ import "./styles.css";
 export function AirConsoleBtn({ href }) {
   return (
     <a
-      className="button"
-      id="air-console"
+      className="button air-console"
       target="_blank"
       href={href}
       rel="noreferrer"
