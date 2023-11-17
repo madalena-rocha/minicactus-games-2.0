@@ -59,6 +59,12 @@ a {
   color: inherit;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .button {
   background: var(--primary-color);
 
@@ -75,25 +81,7 @@ a {
   justify-content: center;
   gap: 1.6rem;
 
-  text-decoration: none;
-
   transition: background 200ms;
-}
-
-/*=== MENU-EXPANDED =====================*/
-
-body.menu-expanded {
-  overflow: hidden;
-}
-
-body.menu-expanded > :not(nav) {
-  visibility: hidden;
-}
-
-body.menu-expanded .logo,
-body.menu-expanded button {
-  position: relative;
-  z-index: 100;
 }
 
 /*=== RESPONSIVO ========================*/

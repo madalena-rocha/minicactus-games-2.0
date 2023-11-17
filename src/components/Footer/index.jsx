@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 import { handleLinkClick } from "../../utils/handleLinkClick";
-import { useScrollReveal } from "../../utils/useScrollReveal";
+//import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -12,11 +12,11 @@ import minicactusGamesLogo from "../../assets/minicactus-games-logo.png";
 export function Footer() {
   const { pathname } = useLocation();
 
-  useScrollReveal(`
-    footer p,
-    footer ul,
-    footer li
-  `);
+  // useScrollReveal(`
+  //   footer p,
+  //   footer ul,
+  //   footer li
+  // `);
 
   return (
     <footer>

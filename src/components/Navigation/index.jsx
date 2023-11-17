@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { useScrollEffect } from "../../utils/useScrollEffect";
 import { handleLinkClick } from "../../utils/handleLinkClick";
-import { useScrollReveal } from "../../utils/useScrollReveal";
+// import { useScrollReveal } from "../../utils/useScrollReveal";
 
 import "./styles.css";
 
@@ -32,11 +32,11 @@ export function Navigation() {
 
   useScrollEffect(setScrolling);
 
-  useScrollReveal(`
-    #navigation .logo,
-    #navigation ul,
-    #navigation .button
-  `);
+  // useScrollReveal(`
+  //   #navigation .logo,
+  //   #navigation ul,
+  //   #navigation .button
+  // `);
 
   return (
     <nav id="navigation" className={scrolling ? "scroll" : ""}>

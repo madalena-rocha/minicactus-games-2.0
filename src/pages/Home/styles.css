@@ -12,11 +12,6 @@
   color: #ff9001;
 }
 
-#games .content a {
-  color: var(--paragraph);
-  text-decoration: none;
-}
-
 #games .cards {
   display: flex;
   flex-direction: column;
@@ -77,11 +72,6 @@
 
 #about header h2 {
   margin-bottom: 2.4rem;
-}
-
-#about .content a {
-  color: var(--paragraph);
-  text-decoration: none;
 }
 
 /*=== CONTACT ===========================*/

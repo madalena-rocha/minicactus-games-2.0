@@ -6,7 +6,8 @@
   margin-bottom: 6rem;
 }
 
-#privacy-policy header span span {
+#privacy-policy header span span,
+#privacy-policy .content h3:last-of-type {
   color: #ff9001;
 }
 
@@ -21,10 +22,6 @@
 #privacy-policy .content h3 {
   margin-block: 2.4rem;
   color: var(--headline);
-}
-
-#privacy-policy .content h3:last-of-type {
-  color: #ff9001;
 }
 
 #privacy-policy .content a {

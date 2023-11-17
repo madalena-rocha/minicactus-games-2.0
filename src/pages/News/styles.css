@@ -29,8 +29,6 @@
 #news .card .new {
   display: flex;
   flex-direction: column;
-
-  text-decoration: none;
 }
 
 #news .card h3 {

@@ -11,7 +11,7 @@ Este repositório contém a segunda versão do site da Minicactus Games, criada 
 
 ![Site da Minicactus Games](./public/minicactus-games.png)
 
-[🔗 Site da Minicactus Games](https://www.minicactusgames.com/)
+[🔗 Acesse aqui](https://www.minicactusgames.com/)
 
 <h2>🛠️ Tecnologias</h2>
 

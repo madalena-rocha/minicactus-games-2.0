@@ -6,10 +6,7 @@
   fill: var(--primary-color);
 }
 
-.epic-games svg path:last-child {
-  fill: var(--secondary-color);
-}
-
+.epic-games svg path:last-child,
 .epic-games:hover svg path:first-child {
   fill: var(--secondary-color);
 }
