@@ -59,7 +59,7 @@ export function Home() {
       id: uuidv4(),
       src: roadDefense,
       alt: "Character pointing a gun at the vehicle that is passing on the road.",
-      title: "Road Defense",
+      title: "Road Defense: Outsiders",
       description: [
         {
           id: uuidv4(),
