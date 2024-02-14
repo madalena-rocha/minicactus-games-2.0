@@ -203,6 +203,11 @@ export function Home() {
           key={uuidv4()}
           href="https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/"
         />,
+        <EpicGamesBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.epicgames.com/en-US/p/cat-slide-tiles-93b9d4"
+        />,
       ],
     },
     {
