@@ -9,7 +9,7 @@
 
 Este repositório contém a segunda versão do site da Minicactus Games, criada utilizando ReactJS. A versão inicial do projeto, desenvolvida com HTML, CSS e JavaScript, pode ser encontrada [aqui](https://github.com/madalena-rocha/minicactus-games).
 
-![Site da Minicactus Games](./public/minicactus-games.png)
+![Site da Minicactus Games](./.github/minicactus-games.png)
 
 [🔗 Acesse aqui](https://www.minicactusgames.com/)
 
