@@ -17,6 +17,7 @@ import { Game } from "../../components/Game";
 import { Footer } from "../../components/Footer";
 import { BackToTopBtn } from "../../components/BackToTopBtn";
 
+import outbreakOverlord from "../../../src/assets/outbreak-overlord.png";
 import chaseSurvivors from "../../../src/assets/chase-survivors.png";
 import roadDefense from "../../../src/assets/road-defense.png";
 import underland from "../../../src/assets/underland.png";
@@ -36,6 +37,25 @@ import { MapPin, EnvelopeSimple, DiscordLogo } from "phosphor-react";
 
 export function Home() {
   const gamesData = [
+    {
+      id: uuidv4(),
+      src: outbreakOverlord,
+      alt: "A fence with holes in the background, superimposed by the game's logo.",
+      title: "Outbreak Overlord",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Turn the entire population into zombies before your horde is exterminated. Be strategic in your attacks and become the apocalypse itself.",
+        },
+      ],
+      links: [
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/2850890/Outbreak_Overlord/"
+        />,
+      ],
+    },
     {
       id: uuidv4(),
       src: chaseSurvivors,
