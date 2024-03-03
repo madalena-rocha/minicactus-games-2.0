@@ -189,6 +189,11 @@ export function Home() {
           key={uuidv4()}
           href="https://store.steampowered.com/app/1554550/Unlock_The_Cat/"
         />,
+        <EpicGamesBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac"
+        />,
       ],
     },
     {
