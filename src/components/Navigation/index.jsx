@@ -48,7 +48,7 @@ export function Navigation() {
         >
           <img
             src={minicactusGamesLogo}
-            alt="Minicactus Games logo showing a cactus with a hanging control"
+            alt="Minicactus Games"
           />
 
           <h3>Minicactus Games</h3>

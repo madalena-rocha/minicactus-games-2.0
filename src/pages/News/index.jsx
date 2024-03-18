@@ -21,7 +21,7 @@ export function News() {
     {
       id: uuidv4(),
       src: gamesPark,
-      alt: "Gamespark written in blue on a white background, with the letter s in the shape of a lightning bolt.",
+      alt: "Gamespark",
       href: "https://www.gamespark.jp/article/2023/05/30/130456.html",
       details: "Published: 29th May 2023",
       title:
@@ -30,7 +30,7 @@ export function News() {
     {
       id: uuidv4(),
       src: freeAppsForMe,
-      alt: "Smarthphone showing various apps and the name freeappsforme diagonally",
+      alt: "freeappsforme",
       href: "https://freeappsforme.com/horror-puzzle-games/?fbclid=IwAR0IXgQngKvuIC9NsC46ddj_eWnFRK_p7syj6Fb-r9wDaw1DcKFfIWqYnO8",
       details: "Published: 4th November 2022",
       title: "6 Best Horror Puzzle Games for Android & iOS",
@@ -38,7 +38,7 @@ export function News() {
     {
       id: uuidv4(),
       src: gamesKeys,
-      alt: "GamesKeys written in white with the letter k in orange on a black background.",
+      alt: "GamesKeys",
       href: "https://gameskeys.net/top-steam-games-to-tryout-in-april-2022/",
       details: "Published: 12th April 2022",
       title: "No Cat Fights Here: Top Steam Games to Tryout In April 2022",
@@ -46,7 +46,7 @@ export function News() {
     {
       id: uuidv4(),
       src: eurogamer,
-      alt: "Eurogamer capitalized in blue on a light background, with the image of a globe on the right.",
+      alt: "Eurogamer",
       href: "https://www.eurogamer.net/underland-is-a-fascinating-game-about-drilling-and-blowing-things-up",
       details: "Published: 8th November 2021",
       title:
@@ -55,7 +55,7 @@ export function News() {
     {
       id: uuidv4(),
       src: gamesPark,
-      alt: "Gamespark written in blue on a white background, with the letter s in the shape of a lightning bolt.",
+      alt: "Gamespark",
       href: "https://www.gamespark.jp/article/2021/06/13/109505.html",
       details: "Published: 12th June 2021",
       title: "Cat Slide Tiles: Interview with developer [Japanese]",
@@ -63,7 +63,7 @@ export function News() {
     {
       id: uuidv4(),
       src: gamesKeys,
-      alt: "GamesKeys written in white with the letter k in orange on a black background.",
+      alt: "GamesKeys",
       href: "https://gameskeys.net/top-steam-games-to-tryout-in-june-2021/",
       details: "Published: 12th June 2021",
       title: "Cat Slide Tiles: Top Steam Games To Tryout In June 2021",
@@ -71,7 +71,7 @@ export function News() {
     {
       id: uuidv4(),
       src: pcGamer,
-      alt: "Pc Gamer written in white capital letters on a dark background, with the letters PC on a red background.",
+      alt: "Pc Gamer",
       href: "https://www.pcgamer.com/five-new-steam-games-you-probably-missed-april-26-2021/",
       details: "Published: 26th April 2021",
       title: "Underland: The Climb. Five new Steam games you probably missed",

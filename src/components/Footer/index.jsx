@@ -29,7 +29,7 @@ export function Footer() {
           >
             <img
               src={minicactusGamesLogo}
-              alt="Minicactus Games logo showing a cactus with a hanging control"
+              alt="Minicactus Games"
             />
           </Link>
 
