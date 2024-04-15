@@ -17,6 +17,7 @@ import { Game } from "../../components/Game";
 import { Footer } from "../../components/Footer";
 import { BackToTopBtn } from "../../components/BackToTopBtn";
 
+import catsBalance from "../../../src/assets/cats-balance.png";
 import outbreakOverlord from "../../../src/assets/outbreak-overlord.png";
 import chaseSurvivors from "../../../src/assets/chase-survivors.png";
 import roadDefense from "../../../src/assets/road-defense.png";
@@ -37,6 +38,25 @@ import { MapPin, EnvelopeSimple, DiscordLogo } from "phosphor-react";
 
 export function Home() {
   const gamesData = [
+    {
+      id: uuidv4(),
+      src: catsBalance,
+      alt: "Pixel art of cats in geometric shapes balanced on a platform over a river, with the sky on the horizon as a backdrop.",
+      title: "Cats Balance",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Balance the cats and don't let them fall into the water in this 2D physics puzzler.",
+        },
+      ],
+      links: [
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/2923220/Cats_Balance/"
+        />,
+      ],
+    },
     {
       id: uuidv4(),
       src: outbreakOverlord,
