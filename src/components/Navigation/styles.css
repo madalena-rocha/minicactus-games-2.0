@@ -29,11 +29,7 @@ nav .logo {
 }
 
 nav .logo img {
-  width: 3.1rem;
-}
-
-nav .logo h3 {
-  color: var(--secondary-color);
+  width: 18.1rem;
 }
 
 /*=== MENU-EXPANDED =====================*/
@@ -166,7 +162,6 @@ body.menu-expanded button {
     gap: 3.2rem;
   }
 
-  nav#navigation .logo h3,
   nav#navigation .menu ul li a {
     color: var(--secondary-color);
   }

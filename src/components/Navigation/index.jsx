@@ -50,8 +50,6 @@ export function Navigation() {
             src={minicactusGamesLogo}
             alt="Minicactus Games"
           />
-
-          <h3>Minicactus Games</h3>
         </Link>
 
         <div className="menu">
