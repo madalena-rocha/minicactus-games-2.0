@@ -17,8 +17,9 @@ import { Game } from "../../components/Game";
 import { Footer } from "../../components/Footer";
 import { BackToTopBtn } from "../../components/BackToTopBtn";
 
+import aokaki from "../../../src/assets/aokaki.jpg";
 import catsBalance from "../../../src/assets/cats-balance.png";
-import outbreakOverlord from "../../../src/assets/outbreak-overlord.png";
+import outbreakOverlord from "../../../src/assets/outbreak-overlord.jpg";
 import chaseSurvivors from "../../../src/assets/chase-survivors.png";
 import roadDefense from "../../../src/assets/road-defense.png";
 import underland from "../../../src/assets/underland.png";
@@ -40,20 +41,59 @@ export function Home() {
   const gamesData = [
     {
       id: uuidv4(),
-      src: catsBalance,
-      alt: "Pixel art of cats in geometric shapes balanced on a platform over a river, with the sky on the horizon as a backdrop.",
-      title: "Cats Balance",
+      src: aokaki,
+      alt: "A ronin with his sword fighting against a giant centipede.",
+      title: "AOKAKI",
       description: [
         {
           id: uuidv4(),
-          text: "Balance the cats and don't let them fall into the water in this 2D physics puzzler.",
+          text: "AOKAKI is a fast-paced 2D platformer where you play as an isopod ronin. Explore fun and challenging levels while battling against the forces of the evil Shogun in this bug inhabited pixelart world.",
         },
       ],
       links: [
         <SteamBtn
           id={uuidv4()}
           key={uuidv4()}
-          href="https://store.steampowered.com/app/2923220/Cats_Balance/"
+          href="https://store.steampowered.com/app/2925520/AOKAKI/"
+        />,
+      ],
+    },
+    {
+      id: uuidv4(),
+      src: roadDefense,
+      alt: "Character pointing a gun at the vehicle that is passing on the road.",
+      title: "Road Defense: Outsiders",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Protect the cars on the road! You can approach the defense towers and equip them with various weapons to help you in the task. The hordes of criminals trying to destroy the cars get bigger and bigger as the level progresses.",
+        },
+      ],
+      links: [
+        <NintendoSwitchBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://www.nintendo.com/us/store/products/road-defense-outsiders-switch"
+        />,
+        <PS4Btn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.playstation.com/en-us/concept/10010559"
+        />,
+        <XboxOneBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://www.xbox.com/en-us/games/store/road-defense-outsiders/9p19vfjxktgg"
+        />,
+        <EpicGamesBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.epicgames.com/en-US/p/road-defense-outsiders-22e4ba"
+        />,
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/"
         />,
       ],
     },
@@ -73,49 +113,6 @@ export function Home() {
           id={uuidv4()}
           key={uuidv4()}
           href="https://store.steampowered.com/app/2850890/Outbreak_Overlord/"
-        />,
-      ],
-    },
-    {
-      id: uuidv4(),
-      src: chaseSurvivors,
-      alt: "Four characters surrounded by zombies.",
-      title: "Chase Survivors",
-      description: [
-        {
-          id: uuidv4(),
-          text: "Survive the apocalypse! In 'Chase Survivors,' evolve your character and weapons to face hordes of gruesome creatures. Are you ready?",
-        },
-      ],
-      links: [
-        <SteamBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.steampowered.com/app/2195010/Chase_Survivors/"
-        />,
-      ],
-    },
-    {
-      id: uuidv4(),
-      src: roadDefense,
-      alt: "Character pointing a gun at the vehicle that is passing on the road.",
-      title: "Road Defense: Outsiders",
-      description: [
-        {
-          id: uuidv4(),
-          text: "Protect the cars on the road! You can approach the defense towers and equip them with various weapons to help you in the task. The hordes of criminals trying to destroy the cars get bigger and bigger as the level progresses.",
-        },
-      ],
-      links: [
-        <EpicGamesBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.epicgames.com/en-US/p/road-defense-outsiders-22e4ba"
-        />,
-        <SteamBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/"
         />,
       ],
     },
@@ -189,30 +186,20 @@ export function Home() {
     },
     {
       id: uuidv4(),
-      src: unlockTheCat,
-      alt: "Cat trapped in a pen with stone blocks blocking the way out.",
-      title: "Unlock The Cat",
+      src: chaseSurvivors,
+      alt: "Four characters surrounded by zombies.",
+      title: "Chase Survivors",
       description: [
         {
           id: uuidv4(),
-          text: "Kitty is unable to reach her destination due to some rocks in her path. He could jump over the rocks, but he just doesn't want to do that, as he claims to be very tiring. So it's up to you to carry out the heavy labor for the comfort of this little kitten.",
+          text: "Survive the apocalypse! In 'Chase Survivors,' evolve your character and weapons to face hordes of gruesome creatures. Are you ready?",
         },
       ],
       links: [
-        <NintendoSwitchBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://www.qubyteinteractive.com/games/unlock-the-cat/"
-        />,
         <SteamBtn
           id={uuidv4()}
           key={uuidv4()}
-          href="https://store.steampowered.com/app/1554550/Unlock_The_Cat/"
-        />,
-        <EpicGamesBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac"
+          href="https://store.steampowered.com/app/2195010/Chase_Survivors/"
         />,
       ],
     },
@@ -233,25 +220,73 @@ export function Home() {
           key={uuidv4()}
           href="https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/"
         />,
-        <SteamBtn
+        <PS4Btn
           id={uuidv4()}
           key={uuidv4()}
-          href="https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/"
+          href="https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/"
         />,
         <XboxOneBtn
           id={uuidv4()}
           key={uuidv4()}
           href="https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp"
         />,
-        <PS4Btn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/"
-        />,
         <EpicGamesBtn
           id={uuidv4()}
           key={uuidv4()}
           href="https://store.epicgames.com/en-US/p/cat-slide-tiles-93b9d4"
+        />,
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/"
+        />,
+      ],
+    },
+    {
+      id: uuidv4(),
+      src: unlockTheCat,
+      alt: "Cat trapped in a pen with stone blocks blocking the way out.",
+      title: "Unlock The Cat",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Kitty is unable to reach her destination due to some rocks in her path. He could jump over the rocks, but he just doesn't want to do that, as he claims to be very tiring. So it's up to you to carry out the heavy labor for the comfort of this little kitten.",
+        },
+      ],
+      links: [
+        <NintendoSwitchBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://www.qubyteinteractive.com/games/unlock-the-cat/"
+        />,
+        <EpicGamesBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac"
+        />,
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/1554550/Unlock_The_Cat/"
+        />,
+      ],
+    },
+    {
+      id: uuidv4(),
+      src: catsBalance,
+      alt: "Pixel art of cats in geometric shapes balanced on a platform over a river, with the sky on the horizon as a backdrop.",
+      title: "Cats Balance",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Balance the cats and don't let them fall into the water in this 2D physics puzzler.",
+        },
+      ],
+      links: [
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/2923220/Cats_Balance/"
         />,
       ],
     },
@@ -271,6 +306,63 @@ export function Home() {
           id={uuidv4()}
           key={uuidv4()}
           href="https://store.steampowered.com/app/1942540/No_Cat_Fights_Here/"
+        />,
+      ],
+    },
+    {
+      id: uuidv4(),
+      src: miningCats,
+      alt: "Three cute cats in front of a mine.",
+      title: "Mining Cats",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Mining Cats is a type of logic puzzle that involves blasting rocks and creating paths that connect mines of gemstones of the same color.",
+        },
+      ],
+      links: [
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/1837920/Mining_Cats/"
+        />,
+      ],
+    },
+    {
+      id: uuidv4(),
+      src: farmKittenPuzzlePipes,
+      alt: "Farm with exposed underground irrigation pipeline.",
+      title: "Farm Kitten - Puzzle Pipes",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Help the kitten rotate the pipes to bring water to his farm. The more the kitten plants, the more money he has to fulfill his dreams as a cat.",
+        },
+      ],
+      links: [
+        <SteamBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://store.steampowered.com/app/1721270/Farm_Kitten__Puzzle_Pipes/"
+        />,
+      ],
+    },
+    {
+      id: uuidv4(),
+      src: ludo,
+      alt: "Ludo board with dice thrown on the screen.",
+      title: "Ludo",
+      description: [
+        {
+          id: uuidv4(),
+          text: "Ludo is a strategy board game, in which the players race their four piece from start to finish according to the rolls of a single die. Ludo is derived from the Indian game Pachisi, but simpler. The game and its variations are popular in many countries and under various names.",
+        },
+      ],
+      links: [
+        <AirConsoleBtn
+          id={uuidv4()}
+          key={uuidv4()}
+          href="https://www.airconsole.com/play/ludo"
         />,
       ],
     },
@@ -350,44 +442,6 @@ export function Home() {
     },
     {
       id: uuidv4(),
-      src: miningCats,
-      alt: "Three cute cats in front of a mine.",
-      title: "Mining Cats",
-      description: [
-        {
-          id: uuidv4(),
-          text: "Mining Cats is a type of logic puzzle that involves blasting rocks and creating paths that connect mines of gemstones of the same color.",
-        },
-      ],
-      links: [
-        <SteamBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.steampowered.com/app/1837920/Mining_Cats/"
-        />,
-      ],
-    },
-    {
-      id: uuidv4(),
-      src: farmKittenPuzzlePipes,
-      alt: "Farm with exposed underground irrigation pipeline.",
-      title: "Farm Kitten - Puzzle Pipes",
-      description: [
-        {
-          id: uuidv4(),
-          text: "Help the kitten rotate the pipes to bring water to his farm. The more the kitten plants, the more money he has to fulfill his dreams as a cat.",
-        },
-      ],
-      links: [
-        <SteamBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://store.steampowered.com/app/1721270/Farm_Kitten__Puzzle_Pipes/"
-        />,
-      ],
-    },
-    {
-      id: uuidv4(),
       src: giveMeMorePills,
       alt: "Car jumping off a ramp and running over character, with pills flying across the screen.",
       title: "Give Me More Pills",
@@ -421,25 +475,6 @@ export function Home() {
           id={uuidv4()}
           key={uuidv4()}
           href="https://store.steampowered.com/app/1481140/Lost_Astronaut/"
-        />,
-      ],
-    },
-    {
-      id: uuidv4(),
-      src: ludo,
-      alt: "Ludo board with dice thrown on the screen.",
-      title: "Ludo",
-      description: [
-        {
-          id: uuidv4(),
-          text: "Ludo is a strategy board game, in which the players race their four piece from start to finish according to the rolls of a single die. Ludo is derived from the Indian game Pachisi, but simpler. The game and its variations are popular in many countries and under various names.",
-        },
-      ],
-      links: [
-        <AirConsoleBtn
-          id={uuidv4()}
-          key={uuidv4()}
-          href="https://www.airconsole.com/play/ludo"
         />,
       ],
     },
@@ -492,10 +527,10 @@ export function Home() {
             Founded in 2021 by Cleiton Machado{" "}
             <a
               target="_blank"
-              href="https://twitter.com/clayton_axel"
+              href="https://x.com/cleitoncmachado"
               rel="noreferrer"
             >
-              (@clayton_axel)
+              (@cleitoncmachado)
             </a>
             , Minicactus Games has been developing games of the most diverse
             genres, with more than 10 titles released so far. We are present on
