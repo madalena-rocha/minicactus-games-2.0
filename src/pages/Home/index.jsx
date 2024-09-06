@@ -527,7 +527,7 @@ export function Home() {
             Founded in 2021 by Cleiton Machado{" "}
             <a
               target="_blank"
-              href="https://x.com/cleitoncmachado"
+              href="https://bsky.app/profile/cleitoncmachado.bsky.social"
               rel="noreferrer"
             >
               (@cleitoncmachado)

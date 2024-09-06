@@ -5,6 +5,7 @@ import {
   FacebookLogo,
   YoutubeLogo,
   TwitterLogo,
+  Butterfly,
 } from "phosphor-react";
 
 export function SocialLinks() {
@@ -51,6 +52,17 @@ export function SocialLinks() {
           aria-label="Twitter"
         >
           <TwitterLogo size={24} />
+        </a>
+      </li>
+
+      <li>
+        <a
+          target="_blank"
+          href="https://bsky.app/profile/minicactusgames.com"
+          rel="noreferrer"
+          aria-label="Bluesky"
+        >
+          <Butterfly size={24} />
         </a>
       </li>
     </ul>
