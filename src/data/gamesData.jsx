@@ -1,12 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
 
-import { SteamBtn } from "../components/SteamBtn";
-import { EpicGamesBtn } from "../components/EpicGamesBtn";
-import { NintendoSwitchBtn } from "../components/NintendoSwitchBtn";
-import { PS4Btn } from "../components/PS4Btn";
-import { XboxOneBtn } from "../components/XboxOneBtn";
-import { AirConsoleBtn } from "../components/AirConsoleBtn";
-
 import mineSafety from "../../src/assets/mine-safety.png";
 import aokaki from "../../src/assets/aokaki.jpg";
 import catsBalance from "../../src/assets/cats-balance.png";
@@ -39,11 +32,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/2925520/AOKAKI/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/2925520/AOKAKI/",
+      },
     ],
   },
   {
@@ -58,31 +50,26 @@ const gamesData = [
       },
     ],
     links: [
-      <NintendoSwitchBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.nintendo.com/us/store/products/road-defense-outsiders-switch"
-      />,
-      <PS4Btn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.playstation.com/en-us/concept/10010559"
-      />,
-      <XboxOneBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.xbox.com/en-us/games/store/road-defense-outsiders/9p19vfjxktgg"
-      />,
-      <EpicGamesBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.epicgames.com/en-US/p/road-defense-outsiders-22e4ba"
-      />,
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/"
-      />,
+      {
+        type: "nintendoSwitch",
+        href: "https://www.nintendo.com/us/store/products/road-defense-outsiders-switch",
+      },
+      {
+        type: "ps4",
+        href: "https://store.playstation.com/en-us/concept/10010559",
+      },
+      {
+        type: "xboxOne",
+        href: "https://www.xbox.com/en-us/games/store/road-defense-outsiders/9p19vfjxktgg",
+      },
+      {
+        type: "epicGames",
+        href: "https://store.epicgames.com/en-US/p/road-defense-outsiders-22e4ba",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/",
+      },
     ],
   },
   {
@@ -97,11 +84,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/2850890/Outbreak_Overlord/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/2850890/Outbreak_Overlord/",
+      },
     ],
   },
   {
@@ -116,26 +102,22 @@ const gamesData = [
       },
     ],
     links: [
-      <NintendoSwitchBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.qubyteinteractive.com/games/underland/"
-      />,
-      <PS4Btn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.playstation.com/pt-br/product/UP2158-CUSA29609_00-3707429945542009/"
-      />,
-      <XboxOneBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.xbox.com/en-us/games/store/underland/9nl82ph84j87?activetab=pivot:overviewtab"
-      />,
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1528050/Underland/"
-      />,
+      {
+        type: "nintendoSwitch",
+        href: "https://www.qubyteinteractive.com/games/underland/",
+      },
+      {
+        type: "ps4",
+        href: "https://store.playstation.com/pt-br/product/UP2158-CUSA29609_00-3707429945542009/",
+      },
+      {
+        type: "xboxOne",
+        href: "https://www.xbox.com/en-us/games/store/underland/9nl82ph84j87?activetab=pivot:overviewtab",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1528050/Underland/",
+      },
     ],
   },
   {
@@ -150,26 +132,22 @@ const gamesData = [
       },
     ],
     links: [
-      <NintendoSwitchBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.qubyteinteractive.com/games/underland-theclimb/#contact"
-      />,
-      <PS4Btn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.playstation.com/pt-br/concept/10005086"
-      />,
-      <XboxOneBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.xbox.com/en-us/games/store/underland-the-climb/9n7rvqlgjrg2"
-      />,
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1592340/Underland_The_Climb/"
-      />,
+      {
+        type: "nintendoSwitch",
+        href: "https://www.qubyteinteractive.com/games/underland-theclimb/#contact",
+      },
+      {
+        type: "ps4",
+        href: "https://store.playstation.com/pt-br/concept/10005086",
+      },
+      {
+        type: "xboxOne",
+        href: "https://www.xbox.com/en-us/games/store/underland-the-climb/9n7rvqlgjrg2",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1592340/Underland_The_Climb/",
+      },
     ],
   },
   {
@@ -184,11 +162,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/2195010/Chase_Survivors/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/2195010/Chase_Survivors/",
+      },
     ],
   },
   {
@@ -203,31 +180,26 @@ const gamesData = [
       },
     ],
     links: [
-      <NintendoSwitchBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/"
-      />,
-      <PS4Btn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/"
-      />,
-      <XboxOneBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp"
-      />,
-      <EpicGamesBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.epicgames.com/en-US/p/cat-slide-tiles-93b9d4"
-      />,
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/"
-      />,
+      {
+        type: "nintendoSwitch",
+        href: "https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/",
+      },
+      {
+        type: "ps4",
+        href: "https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/",
+      },
+      {
+        type: "xboxOne",
+        href: "https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp",
+      },
+      {
+        type: "epicGames",
+        href: "https://store.epicgames.com/en-US/p/cat-slide-tiles-93b9d4",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/",
+      },
     ],
   },
   {
@@ -242,21 +214,18 @@ const gamesData = [
       },
     ],
     links: [
-      <NintendoSwitchBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.qubyteinteractive.com/games/unlock-the-cat/"
-      />,
-      <EpicGamesBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac"
-      />,
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1554550/Unlock_The_Cat/"
-      />,
+      {
+        type: "nintendoSwitch",
+        href: "https://www.qubyteinteractive.com/games/unlock-the-cat/",
+      },
+      {
+        type: "epicGames",
+        href: "https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1554550/Unlock_The_Cat/",
+      },
     ],
   },
   {
@@ -271,11 +240,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/2923220/Cats_Balance/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/2923220/Cats_Balance/",
+      },
     ],
   },
   {
@@ -290,11 +258,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1942540/No_Cat_Fights_Here/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1942540/No_Cat_Fights_Here/",
+      },
     ],
   },
   {
@@ -309,11 +276,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1837920/Mining_Cats/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1837920/Mining_Cats/",
+      },
     ],
   },
   {
@@ -328,11 +294,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1721270/Farm_Kitten__Puzzle_Pipes/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1721270/Farm_Kitten__Puzzle_Pipes/",
+      },
     ],
   },
   {
@@ -347,11 +312,10 @@ const gamesData = [
       },
     ],
     links: [
-      <AirConsoleBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://www.airconsole.com/play/ludo"
-      />,
+      {
+        type: "airConsole",
+        href: "https://www.airconsole.com/play/ludo",
+      },
     ],
   },
   {
@@ -387,11 +351,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/agecheck/app/2157100/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/agecheck/app/2157100/",
+      },
     ],
   },
   {
@@ -420,11 +383,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1889650/Jigsaw_Bestiary/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1889650/Jigsaw_Bestiary/",
+      },
     ],
   },
   {
@@ -439,11 +401,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/agecheck/app/1752610/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/agecheck/app/1752610/",
+      },
     ],
   },
   {
@@ -458,11 +419,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/3795670/Mine_Safety/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/3795670/Mine_Safety/",
+      },
     ],
   },
   {
@@ -477,11 +437,10 @@ const gamesData = [
       },
     ],
     links: [
-      <SteamBtn
-        id={uuidv4()}
-        key={uuidv4()}
-        href="https://store.steampowered.com/app/1481140/Lost_Astronaut/"
-      />,
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1481140/Lost_Astronaut/",
+      },
     ],
   },
 ];

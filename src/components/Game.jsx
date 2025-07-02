@@ -1,5 +1,21 @@
 import React from "react";
 
+import { SteamBtn } from "../components/SteamBtn";
+import { EpicGamesBtn } from "../components/EpicGamesBtn";
+import { NintendoSwitchBtn } from "../components/NintendoSwitchBtn";
+import { PS4Btn } from "../components/PS4Btn";
+import { XboxOneBtn } from "../components/XboxOneBtn";
+import { AirConsoleBtn } from "../components/AirConsoleBtn";
+
+const buttonComponents = {
+  steam: SteamBtn,
+  epicGames: EpicGamesBtn,
+  nintendoSwitch: NintendoSwitchBtn,
+  ps4: PS4Btn,
+  xboxOne: XboxOneBtn,
+  airConsole: AirConsoleBtn,
+};
+
 export function Game({ src, alt, title, description, links }) {
   return (
     <div className="card">
@@ -12,9 +28,11 @@ export function Game({ src, alt, title, description, links }) {
       </p>
 
       <div className="button-container">
-        {links.map((link) => (
-          <React.Fragment key={link.props.id}>{link}</React.Fragment>
-        ))}
+        {links.map(({ type, href }, index) => {
+          const BtnComponent = buttonComponents[type];
+          if (!BtnComponent) return null;
+          return <BtnComponent key={index} href={href} />;
+        })}
       </div>
     </div>
   );
