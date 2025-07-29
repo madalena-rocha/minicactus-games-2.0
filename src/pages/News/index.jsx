@@ -4,7 +4,7 @@ import "./styles.css";
 
 import { Navigation } from "../../components/Navigation";
 import { Section } from "../../components/Section";
-import { New } from "../../components/New";
+import { NewsStory } from "../../components/NewsStory";
 import { Footer } from "../../components/Footer";
 import { BackToTopBtn } from "../../components/BackToTopBtn";
 
@@ -25,7 +25,7 @@ export function News() {
       <Section id="news" title="News">
         <div className="cards">
           {newsData.map((notice) => (
-            <New
+            <NewsStory
               key={notice.id}
               src={notice.src}
               alt={notice.alt}
@@ -34,7 +34,7 @@ export function News() {
               title={notice.title}
             >
               {notice.links}
-            </New>
+            </NewsStory>
           ))}
         </div>
       </Section>
