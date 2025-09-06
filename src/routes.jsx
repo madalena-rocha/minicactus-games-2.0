@@ -4,6 +4,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 
 import { Home } from "./pages/Home";
 import { News } from "./pages/News";
+import { Aokaki } from "./pages/Aokaki";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 
 export function AppRoutes() {
@@ -13,6 +14,7 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
+        <Route path="/aokaki" element={<Aokaki />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
