@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 
 import { SteamBtn } from "../components/SteamBtn";
 import { EpicGamesBtn } from "../components/EpicGamesBtn";
@@ -16,10 +17,17 @@ const buttonComponents = {
   airConsole: AirConsoleBtn,
 };
 
-export function Game({ src, alt, title, description, links }) {
+export function Game({ src, alt, title, description, links, linkTo }) {
   return (
     <div className="card">
-      <img src={src} alt={alt} />
+      {linkTo ? (
+        <RouterLink to={linkTo}>
+          <img src={src} alt={alt} />
+        </RouterLink>
+      ) : (
+        <img src={src} alt={alt} />
+      )}
+
       <h3>{title}</h3>
       <p>
         {description.map((item) => (

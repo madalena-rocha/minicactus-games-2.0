@@ -43,11 +43,6 @@ export function Menu({ closeMenu }) {
         </ScrollLink>
       </li>
       <li>
-        <RouterLink to="/aokaki" onClick={() => closeMenu()}>
-          AOKAKI
-        </RouterLink>
-      </li>
-      <li>
         <RouterLink to="/news" onClick={() => closeMenu()}>
           News
         </RouterLink>
@@ -69,15 +64,6 @@ export function Menu({ closeMenu }) {
         <HashLink to="/#contact" onClick={() => closeMenu()}>
           Contact
         </HashLink>
-      </li>
-      <li>
-        <RouterLink
-          to="/aokaki"
-          className={pathname === "/aokaki" ? "active" : ""}
-          onClick={() => closeMenu()}
-        >
-          AOKAKI
-        </RouterLink>
       </li>
       <li>
         <RouterLink

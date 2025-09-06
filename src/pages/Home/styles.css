@@ -27,7 +27,7 @@
   justify-content: space-between;
 }
 
-#games .card > :not(img) {
+#games .card > *:not(:first-child) {
   margin: 2.4rem;
 }
 

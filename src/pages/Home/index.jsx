@@ -49,6 +49,7 @@ export function Home() {
                 title={game.title}
                 description={game.description}
                 links={game.links}
+                linkTo={game.linkTo}
               />
             ))}
           </div>

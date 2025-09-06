@@ -39,6 +39,7 @@ const gamesData = [
         href: "https://store.steampowered.com/app/2925520/AOKAKI/",
       },
     ],
+    linkTo: "/aokaki",
   },
   {
     id: uuidv4(),
