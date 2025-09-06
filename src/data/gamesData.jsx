@@ -1,23 +1,25 @@
 import { v4 as uuidv4 } from "uuid";
 
-import mineSafety from "../../src/assets/mine-safety.png";
 import aokaki from "../../src/assets/aokaki.jpg";
+import catSlideTiles from "../../src/assets/cat-slide-tiles.png";
 import catsBalance from "../../src/assets/cats-balance.png";
-import outbreakOverlord from "../../src/assets/outbreak-overlord.jpg";
 import chaseSurvivors from "../../src/assets/chase-survivors.png";
+import farmKittenPuzzlePipes from "../../src/assets/farm-kitten-puzzle-pipes.png";
+import giveMeMorePills from "../../src/assets/give-me-more-pills.png";
+import hiddenCatsByLouisselle from "../../src/assets/hidden-cats-by-louisselle.png";
+import jigsawBestiary from "../../src/assets/jigsaw-bestiary.jpg";
+import lostAstronaut from "../../src/assets/lost-astronaut.png";
+import ludo from "../../src/assets/ludo.png";
+import mineSafety from "../../src/assets/mine-safety.png";
+import miningCats from "../../src/assets/mining-cats.png";
+import myIdleSpaceCruiser from "../../src/assets/my-idle-space-cruiser.png";
+import noCatFightsHere from "../../src/assets/no-cat-fights-here.png";
+import outbreakOverlord from "../../src/assets/outbreak-overlord.jpg";
 import roadDefense from "../../src/assets/road-defense.png";
+import theVillagerAndTheWerewolf from "../../src/assets/the-villager-and-the-werewolf.png";
 import underland from "../../src/assets/underland.png";
 import underlandTheClimb from "../../src/assets/underland-the-climb.png";
 import unlockTheCat from "../../src/assets/unlock-the-cat.png";
-import catSlideTiles from "../../src/assets/cat-slide-tiles.png";
-import noCatFightsHere from "../../src/assets/no-cat-fights-here.png";
-import theVillagerAndTheWerewolf from "../../src/assets/the-villager-and-the-werewolf.png";
-import jigsawBestiary from "../../src/assets/jigsaw-bestiary.jpg";
-import miningCats from "../../src/assets/mining-cats.png";
-import farmKittenPuzzlePipes from "../../src/assets/farm-kitten-puzzle-pipes.png";
-import giveMeMorePills from "../../src/assets/give-me-more-pills.png";
-import lostAstronaut from "../../src/assets/lost-astronaut.png";
-import ludo from "../../src/assets/ludo.png";
 
 const gamesData = [
   {
@@ -69,6 +71,102 @@ const gamesData = [
       {
         type: "steam",
         href: "https://store.steampowered.com/agecheck/app/1973320/Road_Defense_Outsiders/",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    src: catSlideTiles,
+    alt: "Cat in front of a puzzle scenario with the path blocked by objects.",
+    title: "Cat Slide Tiles",
+    description: [
+      {
+        id: uuidv4(),
+        text: "Move the sliding tiles to unblock a path for the kitten to walk to the exit.",
+      },
+    ],
+    links: [
+      {
+        type: "nintendoSwitch",
+        href: "https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/",
+      },
+      {
+        type: "ps4",
+        href: "https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/",
+      },
+      {
+        type: "xboxOne",
+        href: "https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp",
+      },
+      {
+        type: "epicGames",
+        href: "https://store.epicgames.com/en-US/p/cat-slide-tiles-93b9d4",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    src: unlockTheCat,
+    alt: "Cat trapped in a pen with stone blocks blocking the way out.",
+    title: "Unlock The Cat",
+    description: [
+      {
+        id: uuidv4(),
+        text: "Kitty is unable to reach her destination due to some rocks in her path. He could jump over the rocks, but he just doesn't want to do that, as he claims to be very tiring. So it's up to you to carry out the heavy labor for the comfort of this little kitten.",
+      },
+    ],
+    links: [
+      {
+        type: "nintendoSwitch",
+        href: "https://www.qubyteinteractive.com/games/unlock-the-cat/",
+      },
+      {
+        type: "epicGames",
+        href: "https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac",
+      },
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/1554550/Unlock_The_Cat/",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    src: myIdleSpaceCruiser,
+    alt: "Spaceship flying in outer space with a purple background and a planet.",
+    title: "My Idle Space Cruiser",
+    description: [
+      {
+        id: uuidv4(),
+        text: "This game is a vertical desktop widget where you'll travel the actual distance of the entire known universe aboard your space cruiser. Is Proxima Centauri 4 light-years away? Then we'll travel 4 light-years.",
+      },
+    ],
+    links: [
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/3948530/My_Idle_Space_Cruiser/",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    src: hiddenCatsByLouisselle,
+    alt: "Pixel art of a red notebook on a wooden desk surrounded by stationery, plants, and lights.",
+    title: "Hidden Cats by Louisselle",
+    description: [
+      {
+        id: uuidv4(),
+        text: "Flip through the sketchbook of pixel artist Louisselle and find all the hidden kittens among her beautiful pixel art!",
+      },
+    ],
+    links: [
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/3916110/Hidden_Cats_by_Louisselle/",
       },
     ],
   },
@@ -165,66 +263,6 @@ const gamesData = [
       {
         type: "steam",
         href: "https://store.steampowered.com/app/2195010/Chase_Survivors/",
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    src: catSlideTiles,
-    alt: "Cat in front of a puzzle scenario with the path blocked by objects.",
-    title: "Cat Slide Tiles",
-    description: [
-      {
-        id: uuidv4(),
-        text: "Move the sliding tiles to unblock a path for the kitten to walk to the exit.",
-      },
-    ],
-    links: [
-      {
-        type: "nintendoSwitch",
-        href: "https://www.qubyteinteractive.com/games/Cat-Slide-Tiles/",
-      },
-      {
-        type: "ps4",
-        href: "https://store.playstation.com/en-us/product/UP7958-CUSA39444_00-CATSLIDETILPS4NA/",
-      },
-      {
-        type: "xboxOne",
-        href: "https://www.xbox.com/en-US/games/store/cat-slide-tiles/9nk1v931w0mp",
-      },
-      {
-        type: "epicGames",
-        href: "https://store.epicgames.com/en-US/p/cat-slide-tiles-93b9d4",
-      },
-      {
-        type: "steam",
-        href: "https://store.steampowered.com/app/1646030/Cat_Slide_Tiles/",
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    src: unlockTheCat,
-    alt: "Cat trapped in a pen with stone blocks blocking the way out.",
-    title: "Unlock The Cat",
-    description: [
-      {
-        id: uuidv4(),
-        text: "Kitty is unable to reach her destination due to some rocks in her path. He could jump over the rocks, but he just doesn't want to do that, as he claims to be very tiring. So it's up to you to carry out the heavy labor for the comfort of this little kitten.",
-      },
-    ],
-    links: [
-      {
-        type: "nintendoSwitch",
-        href: "https://www.qubyteinteractive.com/games/unlock-the-cat/",
-      },
-      {
-        type: "epicGames",
-        href: "https://store.epicgames.com/pt-BR/p/unlock-the-cat-487fac",
-      },
-      {
-        type: "steam",
-        href: "https://store.steampowered.com/app/1554550/Unlock_The_Cat/",
       },
     ],
   },
