@@ -6,7 +6,7 @@ import catsBalance from "../../src/assets/cats-balance.png";
 import chaseSurvivors from "../../src/assets/chase-survivors.png";
 import farmKittenPuzzlePipes from "../../src/assets/farm-kitten-puzzle-pipes.png";
 import giveMeMorePills from "../../src/assets/give-me-more-pills.png";
-import hiddenCatsByLouisselle from "../../src/assets/hidden-cats-by-louisselle.png";
+import catsInPixelsByLouisselle from "../../src/assets/cats-in-pixels-by-louisselle.png";
 import jigsawBestiary from "../../src/assets/jigsaw-bestiary.jpg";
 import lostAstronaut from "../../src/assets/lost-astronaut.png";
 import ludo from "../../src/assets/ludo.png";
@@ -155,9 +155,9 @@ const gamesData = [
   },
   {
     id: uuidv4(),
-    src: hiddenCatsByLouisselle,
+    src: catsInPixelsByLouisselle,
     alt: "Pixel art of a red notebook on a wooden desk surrounded by stationery, plants, and lights.",
-    title: "Hidden Cats by Louisselle",
+    title: "Cats in Pixels by Louisselle",
     description: [
       {
         id: uuidv4(),
@@ -167,7 +167,7 @@ const gamesData = [
     links: [
       {
         type: "steam",
-        href: "https://store.steampowered.com/app/3916110/Hidden_Cats_by_Louisselle/",
+        href: "https://store.steampowered.com/app/3916110/",
       },
     ],
   },
