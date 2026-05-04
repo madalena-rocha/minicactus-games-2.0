@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import aokaki from "../../src/assets/aokaki.jpg";
 import catSlideTiles from "../../src/assets/cat-slide-tiles.png";
 import catsBalance from "../../src/assets/cats-balance.png";
+import catWatch from "../../src/assets/cat-watch.png";
 import chaseSurvivors from "../../src/assets/chase-survivors.png";
 import farmKittenPuzzlePipes from "../../src/assets/farm-kitten-puzzle-pipes.png";
 import giveMeMorePills from "../../src/assets/give-me-more-pills.png";
@@ -16,12 +17,31 @@ import myIdleSpaceCruiser from "../../src/assets/my-idle-space-cruiser.png";
 import noCatFightsHere from "../../src/assets/no-cat-fights-here.png";
 import outbreakOverlord from "../../src/assets/outbreak-overlord.jpg";
 import roadDefense from "../../src/assets/road-defense.png";
+import roadDefenseRacing from "../../src/assets/road-defense-racing.png";
 import theVillagerAndTheWerewolf from "../../src/assets/the-villager-and-the-werewolf.png";
 import underland from "../../src/assets/underland.png";
 import underlandTheClimb from "../../src/assets/underland-the-climb.png";
 import unlockTheCat from "../../src/assets/unlock-the-cat.png";
 
 const gamesData = [
+  {
+    id: uuidv4(),
+    src: roadDefenseRacing,
+    alt: "Armed cars competing in a race on a sandy track.",
+    title: "Road Defense Racing",
+    description: [
+      {
+        id: uuidv4(),
+        text: "High-speed vehicular combat racing set in the world of Road Defense: Outsiders. Drive, shoot, destroy, and upgrade your car across 30 challenging tracks. Battle armed rivals and survive attacks from a hostile crowd while earning cash to upgrade your vehicle.",
+      },
+    ],
+    links: [
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/4622010/Road_Defense_Racing/",
+      },
+    ],
+  },
   {
     id: uuidv4(),
     src: aokaki,
@@ -282,6 +302,24 @@ const gamesData = [
       {
         type: "steam",
         href: "https://store.steampowered.com/app/2923220/Cats_Balance/",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    src: catWatch,
+    alt: "A cat defending an apartment infested with insects.",
+    title: "Cat Watch",
+    description: [
+      {
+        id: uuidv4(),
+        text: "A 2D arcade shooter minigame with roguelike progression where you control a cat defending an apartment against enemies that seek cover and strike at the right moment. Jump, attack, and eliminate waves of mosquitoes, rats, and bats as you advance toward the source of the infestation.",
+      },
+    ],
+    links: [
+      {
+        type: "steam",
+        href: "https://store.steampowered.com/app/4614580/Cat_Watch/",
       },
     ],
   },
